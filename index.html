@@ -1,0 +1,1806 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Qorino Machineries &amp; Robotics — 210,000 Machine Dossiers</title>
+<meta name="description" content="Qorino Machineries & Robotics — 210 sectors, 210,000 distinct machines and robots with live prices, diagrams, analytics, buying channels and an AI assistant." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06070f;--panel:rgba(17,20,38,.72);--line:rgba(120,140,255,.18);--line-2:rgba(120,140,255,.32);
+  --ink:#e9edff;--muted:#8d95bd;--cyan:#00e5ff;--magenta:#ff2bd6;--lime:#b6ff3c;--violet:#7a5cff;--amber:#ffb340;
+  --radius:16px;--font:'Outfit',system-ui,-apple-system,sans-serif;--display:'Space Grotesk',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  background-image:
+    radial-gradient(900px 620px at 6% -8%, rgba(122,92,255,.30), transparent 62%),
+    radial-gradient(820px 520px at 98% 0%, rgba(255,43,214,.18), transparent 62%),
+    radial-gradient(1100px 760px at 50% 115%, rgba(0,229,255,.15), transparent 62%),
+    radial-gradient(700px 500px at 80% 60%, rgba(182,255,60,.06), transparent 65%);
+  background-attachment:fixed}
+body::before{content:"";position:fixed;inset:-50%;z-index:-2;pointer-events:none;
+  background-image:linear-gradient(rgba(120,140,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(120,140,255,.055) 1px,transparent 1px);
+  background-size:64px 64px;animation:drift 40s linear infinite;
+  mask-image:radial-gradient(circle at 50% 40%,#000 30%,transparent 78%)}
+@keyframes drift{to{transform:translate3d(64px,64px,0)}}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E")}
+::selection{background:rgba(255,43,214,.35);color:#fff}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--display);margin:0 0 .4em;line-height:1.12;letter-spacing:-.02em}
+p{margin:0 0 1em;color:#c3c9e8;line-height:1.65}
+strong{color:#fff}
+
+.nav{position:sticky;top:0;z-index:90;backdrop-filter:blur(18px);
+  background:linear-gradient(180deg,rgba(6,7,15,.92),rgba(6,7,15,.62));border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1440px;margin:0 auto;padding:14px 26px;display:flex;align-items:center;gap:26px}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:700;font-size:1.16rem;letter-spacing:-.02em}
+.brand-mark{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;font-size:17px;
+  background:conic-gradient(from 210deg,var(--violet),var(--magenta),var(--cyan),var(--lime),var(--violet));
+  color:#05060d;box-shadow:0 0 26px rgba(255,43,214,.5)}
+.brand small{display:block;font-family:var(--font);font-size:.62rem;letter-spacing:.22em;color:var(--muted);font-weight:400}
+.nav-links{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.nav-link{padding:9px 15px;border-radius:11px;font-size:.9rem;color:#b9c0e2;transition:.18s;white-space:nowrap}
+.nav-link:hover{color:#fff;background:rgba(122,92,255,.16)}
+.nav-link.active{color:#fff;background:linear-gradient(135deg,rgba(122,92,255,.34),rgba(255,43,214,.22));box-shadow:inset 0 0 0 1px var(--line-2)}
+.nav-cta{padding:9px 17px;border-radius:11px;font-size:.88rem;font-weight:600;color:#05060d;
+  background:linear-gradient(135deg,var(--cyan),var(--lime));box-shadow:0 0 22px rgba(0,229,255,.35)}
+.nav-cta:hover{filter:brightness(1.1)}
+
+.wrap{max-width:1440px;margin:0 auto;padding:0 26px}
+.section{padding:74px 0}
+.section-head{max-width:820px;margin-bottom:36px}
+.section-head h2{font-size:clamp(1.6rem,3.3vw,2.5rem)}
+.section-head p{color:var(--muted);font-size:1.02rem;margin:0}
+.grid{display:grid;gap:18px}
+.grid-3{grid-template-columns:repeat(auto-fill,minmax(310px,1fr))}
+.grid-4{grid-template-columns:repeat(auto-fill,minmax(255px,1fr))}
+.center{text-align:center}
+.mt-32{margin-top:32px}
+.glass{background:var(--panel);border:1px solid var(--line);border-radius:22px;backdrop-filter:blur(14px);
+  box-shadow:0 24px 60px -30px rgba(0,0,0,.9)}
+.card{background:linear-gradient(180deg,rgba(22,26,48,.78),rgba(12,15,30,.82));border:1px solid var(--line);
+  border-radius:var(--radius);padding:22px;position:relative;transition:transform .22s,border-color .22s,box-shadow .22s}
+.card:hover{transform:translateY(-4px);border-color:var(--line-2);box-shadow:0 22px 50px -26px rgba(122,92,255,.85)}
+.pill{display:inline-block;font-size:.7rem;letter-spacing:.2em;padding:7px 13px;border-radius:100px;color:#cfd6ff;
+  border:1px solid var(--line-2);background:rgba(122,92,255,.13);margin-bottom:20px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:13px;font-weight:600;
+  font-size:.94rem;border:1px solid transparent;cursor:pointer;transition:.2s;font-family:var(--font)}
+.btn-primary{background:linear-gradient(135deg,var(--violet),var(--magenta));color:#fff;box-shadow:0 14px 40px -14px rgba(255,43,214,.8)}
+.btn-primary:hover{filter:brightness(1.12);transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.04);color:#dfe4ff;border-color:var(--line-2)}
+.btn-ghost:hover{background:rgba(122,92,255,.18)}
+
+.hero{padding:66px 0 40px;position:relative}
+.hero-grid{max-width:1440px;margin:0 auto;padding:0 26px;display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:center}
+.hero-copy h1{font-size:clamp(2.2rem,5vw,4.1rem);font-weight:700;letter-spacing:-.035em}
+.glitch{background:linear-gradient(100deg,#fff 10%,var(--cyan) 38%,var(--violet) 62%,var(--magenta) 88%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;background-size:220% 100%;animation:shift 9s ease-in-out infinite}
+@keyframes shift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.lede{font-size:1.06rem;max-width:640px;color:#b9c0e2}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0 34px}
+.stats-row{display:flex;gap:14px;flex-wrap:wrap}
+.stat{padding:14px 20px;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid var(--line);min-width:118px}
+.stat b{display:block;font-family:var(--display);font-size:1.5rem;background:linear-gradient(135deg,var(--cyan),var(--lime));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-size:.72rem;letter-spacing:.13em;color:var(--muted);text-transform:uppercase}
+.hero-visual{position:relative;min-height:420px;display:grid;place-items:center}
+.orb{position:absolute;border-radius:50%;filter:blur(52px);opacity:.55;animation:float 13s ease-in-out infinite}
+.orb-a{width:280px;height:280px;background:var(--violet);top:2%;left:4%}
+.orb-b{width:230px;height:230px;background:var(--magenta);bottom:6%;right:2%;animation-delay:-4s}
+.orb-c{width:200px;height:200px;background:var(--cyan);top:44%;left:46%;animation-delay:-8s}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(24px,-28px) scale(1.09)}66%{transform:translate(-22px,20px) scale(.95)}}
+.hero-card{position:relative;width:100%;max-width:430px;padding:18px;border-radius:20px}
+.hc-head{display:flex;align-items:center;gap:7px;padding-bottom:13px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.dot{width:9px;height:9px;border-radius:50%;background:#2c3358}
+.dot:nth-child(1){background:var(--magenta)}.dot:nth-child(2){background:var(--amber)}.dot:nth-child(3){background:var(--lime)}
+.hc-title{margin-left:auto;font-size:.63rem;letter-spacing:.24em;color:var(--muted)}
+.hc-feed{display:flex;flex-direction:column;gap:2px;max-height:300px;overflow:hidden}
+.feed-row{display:flex;align-items:center;gap:11px;padding:9px 10px;border-radius:9px;font-size:.85rem;transition:.18s;
+  opacity:0;animation:slideIn .5s var(--d,0s) forwards;transform:translateX(-12px)}
+@keyframes slideIn{to{opacity:1;transform:none}}
+.feed-row:hover{background:rgba(122,92,255,.16)}
+.feed-dot{width:7px;height:7px;border-radius:50%;flex:none;box-shadow:0 0 10px currentColor}
+.feed-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#cdd4f5}
+.feed-price{font-family:var(--display);font-size:.78rem;color:var(--lime)}
+
+.feature-card .fc-icon{font-size:1.65rem;margin-bottom:14px;display:block;filter:drop-shadow(0 0 14px rgba(122,92,255,.85))}
+.feature-card h3{font-size:1.06rem}
+.feature-card p{font-size:.9rem;color:var(--muted);margin:0}
+
+.domain-card{display:block;border-top:2px solid hsl(var(--hue) 90% 62%);transition:.22s}
+.domain-card:hover{border-color:hsl(var(--hue) 90% 62%);transform:translateY(-4px)}
+.dc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.dc-icon{font-size:1.6rem}
+.dc-count{font-size:.68rem;letter-spacing:.13em;color:hsl(var(--hue) 90% 70%);
+  background:hsl(var(--hue) 90% 62% / .13);padding:5px 10px;border-radius:100px;border:1px solid hsl(var(--hue) 90% 62% / .32)}
+.domain-card h3{font-size:1.06rem}
+.domain-card p{font-size:.82rem;color:var(--muted);margin:0 0 14px;line-height:1.55}
+.dc-link{font-size:.8rem;font-weight:600;color:hsl(var(--hue) 90% 72%)}
+
+.sector-card{display:block;border-left:3px solid hsl(var(--hue) 90% 62%)}
+.sector-card:hover{border-color:hsl(var(--hue) 90% 62%);transform:translateY(-3px)}
+.sector-card h3{font-size:1rem;margin-bottom:4px}
+.sector-card .sc-sub{font-size:.72rem;color:var(--muted);letter-spacing:.05em}
+.sector-card .sc-fam{font-size:.78rem;color:hsl(var(--hue) 90% 75%);margin-top:9px}
+.sector-card .sc-count{font-size:.7rem;color:var(--muted);margin-top:6px}
+
+.mcard{display:flex;flex-direction:column;gap:9px;padding:18px;border-radius:15px;
+  background:linear-gradient(180deg,rgba(22,26,48,.8),rgba(11,14,28,.85));border:1px solid var(--line);
+  transition:.22s;position:relative;overflow:hidden}
+.mcard::after{content:"";position:absolute;inset:0;border-radius:15px;pointer-events:none;
+  background:radial-gradient(220px 130px at 90% 0%,hsl(var(--hue) 90% 62% / .17),transparent 70%)}
+.mcard:hover{transform:translateY(-4px);border-color:hsl(var(--hue) 90% 62% / .55);box-shadow:0 20px 44px -24px hsl(var(--hue) 90% 62% / .9)}
+.mcard-top{display:flex;justify-content:space-between;align-items:center}
+.mcard-icon{font-size:1.3rem}
+.badge{font-size:.6rem;letter-spacing:.11em;text-transform:uppercase;padding:4px 9px;border-radius:100px;font-weight:600}
+.badge.New{color:#06110a;background:linear-gradient(135deg,var(--lime),#5ce08a)}
+.badge.Refurbished{color:#1a0d00;background:linear-gradient(135deg,var(--amber),#ff8a3d)}
+.mcard h3{font-size:.93rem;margin:0;line-height:1.3}
+.mcard-sector{font-size:.72rem;color:hsl(var(--hue) 85% 70%);margin:0;letter-spacing:.05em}
+.mcard-meta{display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted);padding-top:9px;border-top:1px solid var(--line)}
+.mcard-meta span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:65%}
+.mcard-foot{display:flex;justify-content:space-between;align-items:baseline}
+.price{font-family:var(--display);font-weight:600;font-size:1.02rem;color:#fff;transition:color .3s}
+.price-flash{animation:flash .9s ease}
+@keyframes flash{0%,100%{color:#fff}40%{color:var(--lime);text-shadow:0 0 12px var(--lime)}}
+.rate{font-size:.76rem;color:var(--amber)}
+
+.steps{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.step{padding:24px}
+.step-num{font-family:var(--display);font-size:2rem;font-weight:700;display:block;margin-bottom:8px;
+  background:linear-gradient(135deg,var(--cyan),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
+.step h4{font-size:1rem;margin-bottom:6px}
+.step p{font-size:.86rem;color:var(--muted);margin:0}
+
+.company{display:grid;grid-template-columns:1.5fr 1fr;gap:44px;padding:46px}
+.company-left h2{font-size:clamp(1.5rem,2.6vw,2.1rem)}
+.company-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.company-tags span{font-size:.76rem;padding:7px 13px;border-radius:100px;background:rgba(122,92,255,.14);
+  border:1px solid var(--line-2);color:#cfd6ff}
+.company-right{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:center}
+.mini-stat{padding:20px;border-radius:15px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+.mini-stat b{display:block;font-family:var(--display);font-size:1.6rem;background:linear-gradient(135deg,var(--cyan),var(--lime));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.mini-stat span{font-size:.7rem;letter-spacing:.11em;color:var(--muted);text-transform:uppercase}
+
+.filters{display:grid;grid-template-columns:2fr 1.4fr 1fr 1fr;gap:13px;margin-bottom:22px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field label{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+input,select,textarea{font-family:var(--font);font-size:.9rem;color:var(--ink);background:rgba(255,255,255,.045);
+  border:1px solid var(--line-2);border-radius:11px;padding:12px 14px;outline:none;transition:.18s;width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(0,229,255,.13)}
+select option{background:#0b0d1a;color:#e9edff}
+.result-count{font-size:.82rem;color:var(--muted);margin-bottom:18px}
+.result-count b{color:var(--cyan)}
+.pager{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.pg{min-width:42px;height:42px;padding:0 12px;border-radius:11px;border:1px solid var(--line);
+  background:rgba(255,255,255,.035);color:#c3c9e8;cursor:pointer;font-family:var(--font);font-size:.86rem;transition:.18s}
+.pg:hover{background:rgba(122,92,255,.22);color:#fff}
+.pg.active{background:linear-gradient(135deg,var(--violet),var(--magenta));color:#fff;border-color:transparent}
+.pg:disabled{opacity:.35;cursor:not-allowed}
+.empty{grid-column:1/-1;text-align:center;padding:60px 0;color:var(--muted)}
+
+.m-hero{padding:52px 0 30px;border-bottom:1px solid var(--line)}
+.m-title{font-size:clamp(1.7rem,4vw,2.8rem);margin-bottom:10px}
+.m-sub{color:var(--muted);font-size:.98rem;margin:0}
+.m-badges{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
+.m-badges span{font-size:.74rem;padding:7px 14px;border-radius:100px;border:1px solid var(--line-2);background:rgba(122,92,255,.13);color:#cfd6ff}
+.m-badges span.live{background:rgba(182,255,60,.13);border-color:rgba(182,255,60,.4);color:var(--lime)}
+.m-layout{display:grid;grid-template-columns:1fr 340px;gap:26px;padding:38px 0 70px;align-items:start}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px;margin-bottom:20px}
+.panel h3{font-size:1.16rem;margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.panel h3::before{content:"";width:4px;height:19px;border-radius:3px;background:linear-gradient(180deg,var(--cyan),var(--magenta))}
+.panel h4{font-size:.98rem;margin:22px 0 8px;color:#dfe4ff}
+.panel p{font-size:.92rem}
+.panel ol,.panel ul{margin:0 0 1em;padding-left:20px;color:#c3c9e8;font-size:.92rem;line-height:1.7}
+.spec-table{width:100%;border-collapse:collapse;font-size:.87rem}
+.spec-table tr{border-bottom:1px solid var(--line)}
+.spec-table tr:last-child{border-bottom:none}
+.spec-table td{padding:10px 0;color:#c3c9e8}
+.spec-table td:first-child{color:var(--muted);width:45%}
+.spec-table td:last-child{text-align:right;font-family:var(--display);color:#fff}
+.diagram{width:100%;border-radius:14px;background:rgba(0,0,0,.35);border:1px solid var(--line)}
+.dg-label{font-family:var(--display);font-size:10px;fill:#aeb6dd;letter-spacing:.07em}
+
+.donut{width:150px;height:150px;border-radius:50%;position:relative;margin:0 auto 16px}
+.donut::after{content:"";position:absolute;inset:26px;border-radius:50%;background:#0a0c18}
+.donut-legend{display:flex;flex-direction:column;gap:7px;font-size:.78rem}
+.donut-legend div{display:flex;align-items:center;gap:8px;color:#c3c9e8}
+.donut-legend i{width:9px;height:9px;border-radius:3px;display:inline-block}
+.bars{display:flex;flex-direction:column;gap:13px;margin-top:6px}
+.bar-row{font-size:.8rem}
+.bar-row .bl{display:flex;justify-content:space-between;margin-bottom:6px;color:var(--muted)}
+.bar-row .bl b{color:#fff;font-family:var(--display)}
+.bar-track{height:8px;border-radius:100px;background:rgba(255,255,255,.07);overflow:hidden}
+.bar-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--cyan),var(--violet),var(--magenta));
+  animation:grow 1.1s cubic-bezier(.2,.8,.2,1) forwards;transform-origin:left;transform:scaleX(0)}
+@keyframes grow{to{transform:scaleX(1)}}
+
+.buy-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.84rem}
+.buy-row:last-child{border-bottom:none}
+.buy-row .bv{font-family:var(--display);color:#fff}
+.buy-row .bm{color:var(--muted);font-size:.76rem}
+.tag{font-size:.65rem;padding:4px 9px;border-radius:100px;letter-spacing:.06em}
+.tag.new{background:rgba(182,255,60,.16);color:var(--lime);border:1px solid rgba(182,255,60,.35)}
+.tag.ref{background:rgba(255,179,64,.16);color:var(--amber);border:1px solid rgba(255,179,64,.35)}
+.tag.live{background:rgba(0,229,255,.16);color:var(--cyan);border:1px solid rgba(0,229,255,.35);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.55}}
+
+.maint-table{width:100%;border-collapse:collapse;font-size:.82rem}
+.maint-table th{text-align:left;color:var(--muted);font-weight:400;font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;padding:0 0 10px}
+.maint-table td{padding:10px 0;border-top:1px solid var(--line);color:#c3c9e8}
+.maint-table td:last-child{color:var(--cyan);font-family:var(--display)}
+
+.side-sticky{position:sticky;top:92px}
+.live-tag{display:inline-flex;align-items:center;gap:6px;font-size:.68rem;letter-spacing:.13em;
+  color:var(--lime);background:rgba(182,255,60,.12);padding:5px 10px;border-radius:100px;border:1px solid rgba(182,255,60,.35);margin-bottom:8px}
+.live-tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 8px var(--lime);animation:pulse 1.5s infinite}
+
+.chat-log{display:flex;flex-direction:column;gap:14px;margin-bottom:20px;min-height:220px}
+.msg{max-width:88%;padding:16px 19px;border-radius:16px;font-size:.92rem;line-height:1.65}
+.msg.bot{background:linear-gradient(180deg,rgba(122,92,255,.18),rgba(255,43,214,.08));border:1px solid var(--line-2);align-self:flex-start;border-bottom-left-radius:5px}
+.msg.user{background:rgba(0,229,255,.11);border:1px solid rgba(0,229,255,.3);align-self:flex-end;border-bottom-right-radius:5px;color:#dff6ff}
+.msg .mini-links{display:flex;flex-direction:column;gap:6px;margin-top:12px}
+.msg .mini-links a{font-size:.82rem;color:var(--cyan);padding:7px 11px;border-radius:9px;background:rgba(0,229,255,.08);border:1px solid rgba(0,229,255,.22)}
+.msg .mini-links a:hover{background:rgba(0,229,255,.18)}
+.chat-input{display:flex;gap:11px}
+.chat-input textarea{resize:none;min-height:56px;max-height:150px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.chip{font-size:.78rem;padding:8px 14px;border-radius:100px;cursor:pointer;background:rgba(255,255,255,.04);border:1px solid var(--line-2);color:#c3c9e8;transition:.18s}
+.chip:hover{background:rgba(122,92,255,.22);color:#fff}
+
+.mfr-row{display:grid;grid-template-columns:1.6fr 1fr 1fr auto;gap:16px;align-items:center;padding:15px 18px;
+  border-radius:13px;border:1px solid var(--line);margin-bottom:9px;background:rgba(255,255,255,.025);font-size:.87rem;transition:.18s}
+.mfr-row:hover{background:rgba(122,92,255,.11);border-color:var(--line-2)}
+.mfr-name{font-family:var(--display);font-weight:500;color:#fff}
+.mfr-meta{color:var(--muted);font-size:.79rem}
+.mfr-link{font-size:.8rem;color:var(--cyan);white-space:nowrap}
+.mfr-head{display:grid;grid-template-columns:1.6fr 1fr 1fr auto;gap:16px;padding:0 18px 10px;
+  font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+
+.footer{border-top:1px solid var(--line);margin-top:40px;padding:56px 0 32px;background:linear-gradient(180deg,transparent,rgba(122,92,255,.06))}
+.foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:38px;margin-bottom:40px}
+.foot-col h5{font-family:var(--display);font-size:.72rem;letter-spacing:.19em;text-transform:uppercase;color:var(--muted);margin:0 0 15px}
+.foot-col a{display:block;font-size:.86rem;color:#b9c0e2;padding:5px 0;transition:.16s}
+.foot-col a:hover{color:var(--cyan)}
+.foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted)}
+
+#toast{position:fixed;bottom:26px;left:50%;transform:translate(-50%,120%);z-index:200;padding:14px 24px;
+  border-radius:13px;font-size:.87rem;color:#05060d;font-weight:600;background:linear-gradient(135deg,var(--lime),var(--cyan));
+  box-shadow:0 18px 40px -12px rgba(0,229,255,.7);transition:transform .34s cubic-bezier(.2,.9,.2,1)}
+#toast.show{transform:translate(-50%,0)}
+
+.breadcrumb{font-size:.8rem;color:var(--muted);margin-bottom:12px}
+.breadcrumb a:hover{color:var(--cyan)}
+.big-number{font-family:var(--display);font-size:1.5rem;background:linear-gradient(135deg,var(--cyan),var(--lime));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+
+@media(max-width:1080px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero-visual{min-height:340px}
+  .m-layout{grid-template-columns:1fr}
+  .side-sticky{position:static}
+  .company{grid-template-columns:1fr;padding:32px}
+  .filters{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .nav-inner{padding:12px 16px;gap:12px}
+  .nav-links{width:100%;order:3;margin-left:0;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}
+  .wrap,.hero-grid{padding:0 16px}
+  .section{padding:48px 0}
+  .filters{grid-template-columns:1fr}
+  .mfr-row,.mfr-head{grid-template-columns:1fr 1fr}
+  .mfr-row .mfr-link{grid-column:1/-1}
+  .foot-grid{grid-template-columns:1fr}
+  .stats-row{gap:9px}
+  .stat{flex:1;min-width:0;padding:11px 13px}
+  .company-right{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<div id="nav"></div>
+<main id="app"></main>
+<div id="footer"></div>
+<div id="toast"></div>
+
+<script>
+/* =========================================================================
+   QORINO DATA ENGINE
+   210 sectors, 1,000 distinct machines each, 210,000 total.
+   Every machine has a unique name. Within a sector: 25 distinct machine
+   families (functions) × 40 capacity/automation variants = 1,000 machines.
+   ========================================================================= */
+var Qorino = (function () {
+  "use strict";
+
+  /* ---------- deterministic PRNG ---------- */
+  function mulberry32(a) {
+    return function () {
+      a |= 0; a = (a + 0x6D2B79F5) | 0;
+      var t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  /* ---------- domain definitions (14 domains × 15 sectors = 210) ---------- */
+  var DOMAINS = [
+    { id:'textile', name:'Textile & Apparel', icon:'🧵', hue:285, basePrice:85000,
+      methods:['Ring','Rotor','Air-Jet','Rapier','Warp','Circular','Flat','Jet','Beam','Card','Comb','Draw','Rove','Slub','Open-End','Warping','Sizing','Mercer','Bleach','Calendar'],
+      forms:['Spinning Frame','Loom','Knitting Machine','Warper','Sizing Machine','Stenter Frame','Dyeing Vat','Printing Press','Carding Machine','Comber','Finisher','Twister','Winder','Tufting Machine','Nonwoven Line','Calender','Mercerizer','Bleaching Range','Beam Dyeing Machine','Rotary Screen'],
+      sectors:[
+        ['cotton-spinning','Cotton Spinning','🧵'],['wool-spinning','Wool Spinning','🐑'],
+        ['synthetic-yarn','Synthetic Yarn','🧶'],['weaving','Weaving','🧶'],
+        ['knitting','Knitting','🧵'],['dyeing','Dyeing','🎨'],
+        ['textile-printing','Textile Printing','🖨️'],['finishing','Finishing','✨'],
+        ['nonwoven','Nonwoven','🧻'],['garment-manufacturing','Garment Manufacturing','👕'],
+        ['embroidery','Embroidery','🪡'],['tufting-carpet','Tufting & Carpet','🟫'],
+        ['lace-net','Lace & Net','🕸️'],['technical-textiles','Technical Textiles','🔧'],
+        ['yarn-processing','Yarn Processing','🧵']
+      ]},
+    { id:'food', name:'Food & Beverage', icon:'🍞', hue:35, basePrice:65000,
+      methods:['Rotary','Linear','Vacuum','Pressure','Steam','Batch','Continuous','Tunnel','Spiral','Centrifugal','Plate','Shell','Tubular','Scraped','Agitated','High-Speed','Low-Temp','Cryogenic','Ultrasonic','Oscillating'],
+      forms:['Filler','Mixer','Cooker','Oven','Freezer','Slicer','Extruder','Pasteurizer','Homogenizer','Separator','Dryer','Washer','Peeler','Cutter','Blender','Dispenser','Depositor','Former','Cooler','Blast Chiller'],
+      sectors:[
+        ['bakery','Bakery Equipment','🥖'],['dairy','Dairy Processing','🥛'],
+        ['meat','Meat Processing','🥩'],['beverage-bottling','Beverage Bottling','🍾'],
+        ['fruit-vegetable','Fruit & Vegetable','🥕'],['confectionery','Confectionery','🍫'],
+        ['grain-milling','Grain Milling','🌾'],['oil-processing','Oil Processing','🫒'],
+        ['snack-food','Snack Food','🍿'],['frozen-food','Frozen Food','🧊'],
+        ['brewing','Brewing Equipment','🍺'],['coffee','Coffee Processing','☕'],
+        ['seafood','Seafood Processing','🐟'],['spice','Spice Processing','🌶️'],
+        ['pet-food','Pet Food','🐕']
+      ]},
+    { id:'packaging', name:'Packaging & Logistics', icon:'📦', hue:190, basePrice:55000,
+      methods:['Rotary','Inline','Vertical','Horizontal','Shrink','Stretch','Vacuum','Blister','Thermoform','Flow-Wrap','Sleeve','Carton','Case','Tray','Robotic','Strapping','Labelling','Capping','Filling','Weighing'],
+      forms:['Wrapper','Sealer','Filler','Capper','Labeller','Cartoner','Case Packer','Palletizer','Depalletizer','Shrink Tunnel','Form-Fill-Seal','Blister Machine','Bagger','Strapper','Coder','Printer','Weigher','Feeder','Conveyor Line','Pallet Wrapper'],
+      sectors:[
+        ['primary-packaging','Primary Packaging','📦'],['secondary-packaging','Secondary Packaging','📦'],
+        ['palletizing','Palletizing','🏗️'],['labelling','Labelling','🏷️'],
+        ['flexible-packaging','Flexible Packaging','🎁'],['rigid-containers','Rigid Containers','🥫'],
+        ['filling-capping','Filling & Capping','🍾'],['cartoning','Cartoning','📦'],
+        ['wrapping','Wrapping','🎀'],['weighing','Weighing','⚖️'],
+        ['material-handling','Material Handling','🏭'],['conveyors','Conveyors','➡️'],
+        ['warehousing','Warehousing','🏢'],['automated-storage','Automated Storage','🤖'],
+        ['sorting','Sorting','🔀']
+      ]},
+    { id:'electronics', name:'Electronics & Semiconductor', icon:'💠', hue:210, basePrice:120000,
+      methods:['Pick-and-Place','Reflow','Wave','Selective','Screen','Stencil','Wire-Bond','Die-Bond','Flip-Chip','Laser','Plasma','Ultrasonic','Thermal','Conformal','Optical','X-Ray','Flying-Probe','Inkjet','Photolithography','Electroplating'],
+      forms:['Soldering Machine','Printer','Furnace','Mounter','Bonder','Cleaner','Tester','Coater','Inspector','Cutter','Driller','Plater','Etcher','Dispenser','Loader','Unloader','Curing Oven','Reflow System','Dispensing Unit','Placement Head'],
+      sectors:[
+        ['pcb-manufacturing','PCB Manufacturing','💠'],['smt-assembly','SMT Assembly','🔌'],
+        ['semiconductor-fab','Semiconductor Fab','💎'],['wire-bonding','Wire Bonding','🔗'],
+        ['soldering','Soldering','🔥'],['inspection-testing','Inspection & Testing','🔍'],
+        ['component-insertion','Component Insertion','🔧'],['conformal-coating','Conformal Coating','🛡️'],
+        ['wafer-processing','Wafer Processing','⭕'],['display-manufacturing','Display Manufacturing','📺'],
+        ['solar-cell','Solar Cell','☀️'],['battery-manufacturing','Battery Manufacturing','🔋'],
+        ['led-assembly','LED Assembly','💡'],['cable-assembly','Cable Assembly','🔌'],
+        ['sensor-manufacturing','Sensor Manufacturing','📡']
+      ]},
+    { id:'heavy', name:'Heavy Engineering & Metal', icon:'⚙️', hue:0, basePrice:180000,
+      methods:['CNC','Vertical','Horizontal','5-Axis','Multi-Axis','Laser','Plasma','Waterjet','Abrasive','Hydraulic','Mechanical','Servo','Precision','Heavy-Duty','High-Speed','Turn-Mill','Wire-EDM','Sinker-EDM','Electrochemical','Ultrasonic'],
+      forms:['Machining Center','Lathe','Milling Machine','Grinder','Press','Shear','Bending Machine','Welder','Cutter','Drill','Borer','Saw','Roll Former','Forging Hammer','Casting Machine','Heat Treatment Furnace','Surface Finisher','Additive System','Shearing Machine','Threading Machine'],
+      sectors:[
+        ['cnc-machining','CNC Machining','🖥️'],['metal-forming','Metal Forming','🔨'],
+        ['welding','Welding','⚡'],['casting','Casting','🏭'],
+        ['forging','Forging','🔨'],['heat-treatment','Heat Treatment','🔥'],
+        ['surface-finishing','Surface Finishing','✨'],['laser-cutting','Laser Cutting','🔦'],
+        ['waterjet-cutting','Waterjet Cutting','💧'],['bending-shearing','Bending & Shearing','📐'],
+        ['rolling-mills','Rolling Mills','🎢'],['extrusion','Extrusion','➡️'],
+        ['stamping','Stamping','🗜️'],['grinding','Grinding','⚙️'],
+        ['metal-additive','Metal Additive','🖨️']
+      ]},
+    { id:'energy', name:'Energy & Power', icon:'⚡', hue:48, basePrice:280000,
+      methods:['Gas','Steam','Wind','Solar','Hydro','Nuclear','Diesel','Combined-Cycle','Cogeneration','Geothermal','Tidal','Wave','Biomass','Waste-to-Energy','Photovoltaic','Thermal','Concentrated','Offshore','Onshore','Modular'],
+      forms:['Turbine','Generator','Boiler','Inverter','Transformer','Compressor','Pump','Heat Exchanger','Condenser','Cooling Tower','Battery System','Fuel Cell','Reactor','Storage Unit','Substation','Switchgear','Panel','Controller','Meter','Converter'],
+      sectors:[
+        ['power-generation','Power Generation','⚡'],['renewables','Renewables','🌱'],
+        ['grid-equipment','Grid Equipment','🔌'],['energy-storage','Energy Storage','🔋'],
+        ['oil-gas','Oil & Gas','🛢️'],['petrochemical','Petrochemical','🧪'],
+        ['boilers-steam','Boilers & Steam','♨️'],['turbines','Turbines','🌀'],
+        ['compressors','Compressors','💨'],['pumps','Pumps','💧'],
+        ['hvac-industrial','HVAC Industrial','❄️'],['water-treatment','Water Treatment','🚰'],
+        ['desalination','Desalination','🌊'],['nuclear-equipment','Nuclear Equipment','☢️'],
+        ['waste-to-energy','Waste-to-Energy','♻️']
+      ]},
+    { id:'marine', name:'Marine & Shipbuilding', icon:'🚢', hue:200, basePrice:220000,
+      methods:['Ship','Marine','Naval','Offshore','Subsea','Deepwater','Coastal','Port','Dredging','Tug','Barge','Ferry','Yacht','Fishing','Cargo','Propulsion','Anchor','Deck','Hull','Submarine'],
+      forms:['Engine','Propeller','Thruster','Winch','Crane','Davit','Windlass','Capstan','Pump','Valve','Generator','Boiler','Compressor','Separator','Tank','Hull Section','Rudder','Stabilizer','Bow Thruster','Stern Drive'],
+      sectors:[
+        ['shipbuilding','Shipbuilding','🚢'],['marine-propulsion','Marine Propulsion','⚓'],
+        ['deck-equipment','Deck Equipment','🛳️'],['ship-repair','Ship Repair','🔧'],
+        ['offshore','Offshore','🌊'],['subsea','Subsea','🤿'],
+        ['port-equipment','Port Equipment','🏗️'],['dredging','Dredging','⛏️'],
+        ['fishing-vessels','Fishing Vessels','🎣'],['yacht-building','Yacht Building','⛵'],
+        ['marine-electrical','Marine Electrical','🔌'],['marine-hvac','Marine HVAC','❄️'],
+        ['cargo-handling','Cargo Handling','📦'],['navigation-systems','Navigation Systems','🧭'],
+        ['marine-fabrication','Marine Fabrication','🔨']
+      ]},
+    { id:'chemical', name:'Chemical & Pharma', icon:'🧪', hue:130, basePrice:95000,
+      methods:['Batch','Continuous','Stirred-Tank','Plug-Flow','Fluidized-Bed','Packed-Bed','Falling-Film','Wiped-Film','Thin-Film','Vacuum','High-Pressure','High-Temperature','Cryogenic','Catalytic','Membrane','Extraction','Distillation','Crystallization','Precipitation','Electrochemical'],
+      forms:['Reactor','Mixer','Blender','Filter','Centrifuge','Distillation Column','Extractor','Dryer','Granulator','Coater','Tablet Press','Fermenter','Homogenizer','Evaporator','Condenser','Heat Exchanger','Crystallizer','Mill','Feeder','Separator'],
+      sectors:[
+        ['reactors','Reactors','⚗️'],['distillation','Distillation','🌡️'],
+        ['filtration','Filtration','🔬'],['mixing-blending','Mixing & Blending','🥣'],
+        ['tableting','Tableting','💊'],['coating','Coating','🖌️'],
+        ['extraction','Extraction','🧪'],['fermentation','Fermentation','🦠'],
+        ['drying','Drying','🌞'],['granulation','Granulation','🟤'],
+        ['sterilization','Sterilization','☢️'],['fluid-handling','Fluid Handling','💧'],
+        ['powder-processing','Powder Processing','🌫️'],['pharma-filling','Pharma Filling','💉'],
+        ['laboratory-equipment','Laboratory Equipment','🔬']
+      ]},
+    { id:'construction', name:'Construction & Mining', icon:'🏗️', hue:20, basePrice:250000,
+      methods:['Hydraulic','Pneumatic','Electric','Diesel','Tracked','Wheeled','Crawler','Tower','Mobile','Articulated','Telescopic','Rotary','Impact','Vibratory','Static','Modular','Heavy-Duty','Compact','Mini','Ultra-Class'],
+      forms:['Excavator','Loader','Dozer','Grader','Roller','Paver','Crane','Drill','Pile Driver','Concrete Mixer','Concrete Pump','Crusher','Screener','Trencher','Scraper','Forklift','Telehandler','Breaker','Compactor','Hauler'],
+      sectors:[
+        ['earthmoving','Earthmoving','🚜'],['excavation','Excavation','⛏️'],
+        ['lifting-cranes','Lifting & Cranes','🏗️'],['concrete','Concrete','🧱'],
+        ['asphalt','Asphalt','🛣️'],['crushing-screening','Crushing & Screening','🪨'],
+        ['drilling','Drilling','🔩'],['tunneling','Tunneling','🚇'],
+        ['mining-extraction','Mining Extraction','⛏️'],['mineral-processing','Mineral Processing','💎'],
+        ['road-building','Road Building','🛣️'],['compaction','Compaction','🔨'],
+        ['piling','Piling','🔨'],['demolition','Demolition','💥'],
+        ['material-transport','Material Transport','🚛']
+      ]},
+    { id:'automotive', name:'Automotive & Transport', icon:'🚗', hue:15, basePrice:160000,
+      methods:['Robotic','Automated','Manual','Semi-Auto','Precision','High-Speed','Laser','Plasma','Press','Weld','Paint','Assembly','Machining','Test','Inspection','Coating','Stamping','Casting','Forming','Trim'],
+      forms:['Welding Cell','Paint Booth','Assembly Line','Press','Robot','Conveyor','Testing Rig','Inspection Station','Milling Center','Lathe','Boring Machine','Grinder','Cutter','Former','Moulder','Press Brake','Chassis Jig','Body Fixture','Engine Line','Trim Station'],
+      sectors:[
+        ['automotive-assembly','Automotive Assembly','🚗'],['engine-manufacturing','Engine Manufacturing','🔧'],
+        ['body-shop','Body Shop','🚙'],['paint-shop','Paint Shop','🎨'],
+        ['tire-manufacturing','Tire Manufacturing','🛞'],['railway-equipment','Railway Equipment','🚂'],
+        ['aerospace','Aerospace','✈️'],['ev-battery','EV Battery','🔋'],
+        ['vehicle-testing','Vehicle Testing','🔬'],['parts-machining','Parts Machining','⚙️'],
+        ['chassis-fabrication','Chassis Fabrication','🔨'],['trim-interior','Trim & Interior','🪑'],
+        ['two-wheeler','Two-Wheeler','🏍️'],['commercial-vehicle','Commercial Vehicle','🚚'],
+        ['auto-recycling','Auto Recycling','♻️']
+      ]},
+    { id:'robotics', name:'Robotics & Automation', icon:'🤖', hue:320, basePrice:88000,
+      methods:['6-Axis','4-Axis','SCARA','Delta','Cartesian','Collaborative','Mobile','Autonomous','Humanoid','Service','Industrial','Medical','Agricultural','Inspection','Underwater','Aerial','Swarm','Teleoperated','Wearable','Educational'],
+      forms:['Robot Arm','End Effector','Gripper','Vision System','Controller','Mobile Platform','Drone','Exoskeleton','Cobot','Robot Cell','Programming Unit','Sensor Suite','Safety System','Teach Pendant','Drive Unit','Joint Module','Linear Actuator','Rotary Actuator','AGV','AMR'],
+      sectors:[
+        ['industrial-robots','Industrial Robots','🏭'],['collaborative-robots','Collaborative Robots','🤝'],
+        ['mobile-robots','Mobile Robots','🚐'],['service-robots','Service Robots','🛎️'],
+        ['humanoid-robots','Humanoid Robots','🧑'],['drones-uav','Drones & UAV','🛩️'],
+        ['robot-arms','Robot Arms','🦾'],['end-effectors','End Effectors','✋'],
+        ['robot-vision','Robot Vision','👁️'],['robot-programming','Robot Programming','💻'],
+        ['exoskeletons','Exoskeletons','🦴'],['inspection-robots','Inspection Robots','🔍'],
+        ['agricultural-robots','Agricultural Robots','🌾'],['medical-robots','Medical Robots','⚕️'],
+        ['swarm-robotics','Swarm Robotics','🐜']
+      ]},
+    { id:'home', name:'Home & Consumer', icon:'🏠', hue:150, basePrice:850,
+      methods:['Cordless','Corded','Manual','Electric','Gas','Steam','Robot','Smart','Compact','Portable','Heavy-Duty','Precision','Digital','Analog','Battery','Rechargeable','Programmable','Automatic','Multi-Function','Professional'],
+      forms:['Vacuum Cleaner','Washing Machine','Dishwasher','Refrigerator','Microwave','Oven','Blender','Mixer','Drill','Saw','Sander','Grinder','Lawn Mower','Air Purifier','Humidifier','Heater','Fan','Iron','Sewing Machine','Coffee Maker'],
+      sectors:[
+        ['kitchen-appliances','Kitchen Appliances','🍳'],['laundry-appliances','Laundry Appliances','🧺'],
+        ['cleaning-equipment','Cleaning Equipment','🧹'],['home-entertainment','Home Entertainment','📺'],
+        ['home-office','Home Office','💼'],['power-tools','Power Tools','🔧'],
+        ['hand-tools','Hand Tools','🔨'],['garden-tools','Garden Tools','🌿'],
+        ['small-kitchen','Small Kitchen','🥄'],['home-robotics','Home Robotics','🤖'],
+        ['climate-control','Climate Control','❄️'],['water-heating','Water Heating','🔥'],
+        ['lighting','Lighting','💡'],['personal-care','Personal Care','💆'],
+        ['diy-equipment','DIY Equipment','🛠️']
+      ]},
+    { id:'agriculture', name:'Agriculture & Forestry', icon:'🌾', hue:100, basePrice:75000,
+      methods:['Tractor-Mounted','Self-Propelled','Trailed','Mounted','Hydraulic','Mechanical','Pneumatic','Precision','GPS-Guided','Autonomous','Rotary','Reel','Combine','Strip-Till','No-Till','Conservation','Organic','High-Clearance','Compact','Heavy-Duty'],
+      forms:['Plough','Harrow','Seeder','Planter','Sprayer','Harvester','Baler','Mower','Tedder','Rake','Irrigation System','Milking Machine','Feeder','Conveyor','Grader','Thresher','Winnower','Dryer','Silo','Fence Post Driver'],
+      sectors:[
+        ['tillage','Tillage','🌱'],['planting-seeding','Planting & Seeding','🌱'],
+        ['harvesting','Harvesting','🌾'],['irrigation','Irrigation','💧'],
+        ['crop-protection','Crop Protection','🛡️'],['dairy-farming','Dairy Farming','🐄'],
+        ['poultry-farming','Poultry Farming','🐔'],['livestock','Livestock','🐑'],
+        ['forestry-equipment','Forestry Equipment','🌲'],['grain-handling','Grain Handling','🌾'],
+        ['greenhouse','Greenhouse','🏡'],['fertilizer-application','Fertilizer Application','💊'],
+        ['orchard-equipment','Orchard Equipment','🍎'],['aquaculture','Aquaculture','🐟'],
+        ['post-harvest','Post-Harvest','📦']
+      ]},
+    { id:'medical', name:'Medical & Laboratory', icon:'⚕️', hue:170, basePrice:110000,
+      methods:['Digital','Analog','Portable','Benchtop','Floor-Standing','Mobile','Handheld','High-Resolution','Low-Dose','Real-Time','Automated','Manual','Sterile','Single-Use','Reusable','Precision','Laser','Ultrasonic','Optical','Magnetic'],
+      forms:['X-Ray System','MRI Scanner','CT Scanner','Ultrasound Machine','Endoscope','Surgical Robot','Patient Monitor','Ventilator','Infusion Pump','Centrifuge','Chromatograph','Spectrometer','Analyzer','Microscope','Sterilizer','Autoclave','Incubator','ECG Machine','Dental Chair','Lab Robot'],
+      sectors:[
+        ['diagnostic-imaging','Diagnostic Imaging','🩻'],['lab-analysis','Laboratory Analysis','🔬'],
+        ['surgical-equipment','Surgical Equipment','🔪'],['patient-monitoring','Patient Monitoring','💓'],
+        ['dental-equipment','Dental Equipment','🦷'],['orthopedic','Orthopedic','🦴'],
+        ['pharma-packaging','Pharma Packaging','💊'],['sterilization','Sterilization','☢️'],
+        ['centrifuges','Centrifuges','🌀'],['chromatography','Chromatography','🧪'],
+        ['spectroscopy','Spectroscopy','🌈'],['sample-handling','Sample Handling','🧫'],
+        ['dna-sequencing','DNA Sequencing','🧬'],['cryogenic-equipment','Cryogenic Equipment','❄️'],
+        ['rehabilitation','Rehabilitation','🦽']
+      ]}
+  ];
+
+  /* ---------- manufacturers (1,000 unique) ---------- */
+  var MP = ['Axiom','Vektor','Nord','Helix','Kraft','Zenith','Orion','Kestrel','Titan','Lumen','Ferrata','Solvent','Arcturus','Bastion','Cygnus','Drax','Eiger','Falcon','Granit','Havok','Indus','Joule','Kappa','Lyra','Magnet','Nimbus','Onyx','Pulsar','Quanta','Rhea','Sigma','Torus','Umbra','Vulcan','Wraith','Xenon','Yardley','Zephyr','Borealis','Cobalt'];
+  var MS = ['Industries','Machinery','Robotics','Systems','Engineering','Works','Technologies','Automation','Werke','Heavy','Dynamics','Precision'];
+  var LEGAL = ['','Group','Ltd','AG','S.p.A.','Corp'];
+  var COUNTRIES = ['Germany','Japan','China','United States','Italy','South Korea','India','Switzerland','Sweden','Taiwan','Netherlands','Turkey','Brazil','Spain','Czechia','Canada','France','United Kingdom','Vietnam','Poland'];
+
+  var MANUFACTURERS = [];
+  (function () {
+    for (var i = 0; i < 1000; i++) {
+      var p = MP[i % 40];
+      var s = MS[Math.floor(i / 40) % 12];
+      var l = LEGAL[Math.floor(i / 480) % 6];
+      var r = mulberry32(90001 + i * 131);
+      MANUFACTURERS.push({
+        id: i,
+        name: p + ' ' + s + (l ? ' ' + l : ''),
+        country: COUNTRIES[Math.floor(r() * COUNTRIES.length)],
+        founded: 1948 + Math.floor(r() * 74),
+        employees: 40 + Math.floor(r() * 24000),
+        email: 'sales@' + (p + s).toLowerCase().replace(/[^a-z]/g, '') + '.example',
+        phone: '+1-' + (200 + Math.floor(r() * 700)) + '-' + (100 + Math.floor(r() * 899)) + '-' + (1000 + Math.floor(r() * 8999)),
+        rating: (3.4 + r() * 1.5).toFixed(1)
+      });
+    }
+  })();
+
+  /* ---------- build sectors & families ---------- */
+  var FAMILIES = [];   // 5,250 families (25 per sector × 210)
+  var SECTORS = [];    // 210 sectors
+  var SECTOR_BY_ID = {};
+
+  (function () {
+    var rand = mulberry32(42);
+    function shuffle(arr) {
+      for (var i = arr.length - 1; i > 0; i--) {
+        var j = Math.floor(rand() * (i + 1));
+        var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+      }
+      return arr;
+    }
+
+    DOMAINS.forEach(function (domain) {
+      var pool = [];
+      domain.methods.forEach(function (m) {
+        domain.forms.forEach(function (f) { pool.push(m + ' ' + f); });
+      });
+      shuffle(pool);
+      var cursor = 0;
+
+      domain.sectors.forEach(function (secDef) {
+        var secId = secDef[0], secName = secDef[1], secIcon = secDef[2];
+        var sectorFamilies = [];
+
+        for (var fi = 0; fi < 25; fi++) {
+          var fam = {
+            id: FAMILIES.length,
+            name: pool[cursor++],
+            sectorId: secId,
+            domainId: domain.id,
+            icon: domain.icon,
+            hue: domain.hue,
+            basePrice: Math.round(domain.basePrice * (0.55 + rand() * 1.1))
+          };
+          FAMILIES.push(fam);
+          sectorFamilies.push(fam);
+        }
+
+        var sector = {
+          id: secId,
+          name: secName,
+          icon: secIcon,
+          domain: domain.name,
+          domainId: domain.id,
+          domainIcon: domain.icon,
+          hue: domain.hue,
+          basePrice: domain.basePrice,
+          families: sectorFamilies,
+          index: SECTORS.length
+        };
+        SECTORS.push(sector);
+        SECTOR_BY_ID[secId] = sector;
+      });
+    });
+  })();
+
+  /* ---------- machines: 1,000 per sector = 210,000 total ---------- */
+  var CAPACITIES = ['Mini','Compact','Bench-Top','Small','Standard','Mid-Range','Large','Heavy-Duty','Industrial','Ultra-Heavy'];
+  var AUTOMATIONS = ['Manual','Semi-Automatic','Fully-Automatic','CNC-Robotic'];
+  var CAP_MULT = [0.15,0.28,0.42,0.58,0.78,1.0,1.28,1.65,2.15,3.2];
+  var AUTO_MULT = [1.0,1.35,1.85,2.6];
+
+  var TOTAL = SECTORS.length * 1000;   // 210,000
+
+  var IDX = {
+    basePrice: new Float32Array(TOTAL),
+    sectorOf:  new Uint16Array(TOTAL),
+    familyOf:  new Uint16Array(TOTAL),
+    variantOf: new Uint8Array(TOTAL),
+    cond:      new Uint8Array(TOTAL)
+  };
+  var SEARCH_NAMES = new Array(TOTAL);
+
+  (function buildIndex() {
+    for (var s = 0; s < SECTORS.length; s++) {
+      var sec = SECTORS[s];
+      for (var f = 0; f < 25; f++) {
+        var fam = sec.families[f];
+        for (var v = 0; v < 40; v++) {
+          var id = s * 1000 + f * 40 + v;
+          IDX.sectorOf[id] = s;
+          IDX.familyOf[id] = fam.id;
+          IDX.variantOf[id] = v;
+
+          var capIdx = Math.floor(v / 4);
+          var autoIdx = v % 4;
+          var seed = (id * 2654435761) % 1000000;
+          var jitter = 0.85 + (seed / 1000000) * 0.35;
+          var price = Math.round(fam.basePrice * CAP_MULT[capIdx] * AUTO_MULT[autoIdx] * jitter / 100) * 100;
+          IDX.basePrice[id] = price;
+          IDX.cond[id] = (id % 5 === 0) ? 1 : 0;
+
+          SEARCH_NAMES[id] = (CAPACITIES[capIdx] + ' ' + AUTOMATIONS[autoIdx] + ' ' + fam.name).toLowerCase();
+        }
+      }
+    }
+  })();
+
+  function buildName(id) {
+    var sec = SECTORS[IDX.sectorOf[id]];
+    var fam = FAMILIES[IDX.familyOf[id]];
+    var v = IDX.variantOf[id];
+    return CAPACITIES[Math.floor(v / 4)] + ' ' + AUTOMATIONS[v % 4] + ' ' + fam.name;
+  }
+
+  function getMachine(id) {
+    id = Number(id);
+    if (id < 0 || id >= TOTAL) return null;
+
+    var sec = SECTORS[IDX.sectorOf[id]];
+    var fam = FAMILIES[IDX.familyOf[id]];
+    var v = IDX.variantOf[id];
+    var oem = MANUFACTURERS[id % 1000];
+    var r1 = mulberry32(id * 7 + 1);
+    var r2 = mulberry32(id * 13 + 2);
+    var r3 = mulberry32(id * 17 + 3);
+    var r4 = mulberry32(id * 23 + 4);
+
+    return {
+      id: id,
+      name: buildName(id),
+      family: fam.name,
+      familyId: fam.id,
+      sector: sec.id,
+      sectorName: sec.name,
+      domain: sec.domain,
+      icon: fam.icon,
+      hue: fam.hue,
+      oem: oem.name,
+      oemId: oem.id,
+      country: oem.country,
+      price: IDX.basePrice[id],
+      cond: IDX.cond[id] === 1 ? 'Refurbished' : 'New',
+      capIdx: Math.floor(v / 4),
+      autoIdx: v % 4,
+      year: 2016 + Math.floor(r2() * 10),
+      rating: 3.5 + r3() * 1.4,
+      power: Math.round((0.4 + r1() * 320) * 10) / 10,
+      weight: Math.round(12 + r2() * 48000),
+      oee: Math.round(55 + r3() * 38),
+      mtbf: Math.round(600 + r4() * 11000),
+      energy: Math.round((1.2 + r1() * 240) * 10) / 10,
+      lead: 4 + Math.floor(r4() * 26)
+    };
+  }
+
+  /* ---------- live pricing engine (simulated) ----------
+     In production replace LivePricing.get() with:
+       fetch('https://api.example.com/v1/prices/' + id)
+       .then(r => r.json()).then(j => j.price)
+     Here we simulate a continuous real-time market drift. */
+  var LivePricing = {
+    get: function (id) {
+      var base = IDX.basePrice[id];
+      if (!base) return 0;
+      var t = Date.now() / 15000;
+      var phase = ((id * 0.137) % (Math.PI * 2)) + t * 0.4;
+      var drift = Math.sin(phase) * 0.05;
+      return Math.max(100, Math.round(base * (1 + drift) / 100) * 100);
+    },
+    change: function (id) {
+      var base = IDX.basePrice[id];
+      var t = Date.now() / 15000;
+      var phase = ((id * 0.137) % (Math.PI * 2)) + t * 0.4;
+      var prev = phase - (86400 / 15000) * 0.4;
+      return (Math.sin(phase) - Math.sin(prev)) * 5;
+    }
+  };
+
+  /* ---------- public API ---------- */
+  return {
+    DOMAINS: DOMAINS,
+    SECTORS: SECTORS,
+    FAMILIES: FAMILIES,
+    MANUFACTURERS: MANUFACTURERS,
+    TOTAL: TOTAL,
+    sectors: function () { return SECTORS; },
+    domains: function () { return DOMAINS; },
+    sectorById: function (id) { return SECTOR_BY_ID[id] || null; },
+    machine: getMachine,
+    nameOf: buildName,
+    priceOf: function (id) { return IDX.basePrice[id]; },
+    livePriceOf: function (id) { return LivePricing.get(id); },
+    searchName: function (id) { return SEARCH_NAMES[id]; },
+    sectorIndexOf: function (id) { return IDX.sectorOf[id]; },
+    familyIndexOf: function (id) { return IDX.familyOf[id]; },
+    variantOf: function (id) { return IDX.variantOf[id]; },
+    stats: function () {
+      return {
+        machines: TOTAL,
+        families: FAMILIES.length,
+        sectors: SECTORS.length,
+        domains: DOMAINS.length,
+        manufacturers: MANUFACTURERS.length
+      };
+    },
+    random: function (n) {
+      var seen = {}, out = [];
+      while (out.length < n) {
+        var idx = (Math.random() * TOTAL) | 0;
+        if (seen[idx]) continue;
+        seen[idx] = 1;
+        out.push(getMachine(idx));
+      }
+      return out;
+    },
+    bySector: function (sectorId) {
+      var sec = SECTOR_BY_ID[sectorId];
+      if (!sec) return [];
+      var start = sec.index * 1000;
+      var arr = [];
+      for (var i = 0; i < 1000; i++) arr.push(start + i);
+      return arr;
+    }
+  };
+})();
+
+/* =========================================================================
+   APP SHELL
+   ========================================================================= */
+var App = (function () {
+  "use strict";
+
+  function money(n) {
+    if (n >= 1e6) return '$' + (n / 1e6).toFixed(2) + 'M';
+    if (n >= 1e3) return '$' + Math.round(n / 1e3) + 'k';
+    return '$' + n;
+  }
+  function num(n) { return n.toLocaleString('en-US'); }
+
+  function liveTag() {
+    return '<span class="live-tag">LIVE PRICING</span>';
+  }
+
+  function machineCard(m) {
+    var live = Qorino.livePriceOf(m.id);
+    return '<a class="mcard" href="#/machine/' + m.id + '" style="--hue:' + m.hue + '">' +
+      '<div class="mcard-top"><span class="mcard-icon">' + m.icon + '</span>' +
+      '<span class="badge ' + m.cond + '">' + m.cond + '</span></div>' +
+      '<h3>' + m.name + '</h3>' +
+      '<p class="mcard-sector">' + m.sectorName + ' · ' + m.family + '</p>' +
+      '<div class="mcard-meta"><span>' + m.oem + '</span><span>' + m.year + '</span></div>' +
+      '<div class="mcard-foot"><span class="price" data-price-id="' + m.id + '">' +
+        money(live) + '</span>' +
+        '<span class="rate">★ ' + m.rating.toFixed(1) + '</span></div></a>';
+  }
+
+  function toast(msg) {
+    var t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(t._tm);
+    t._tm = setTimeout(function () { t.classList.remove('show'); }, 2600);
+  }
+
+  var NAV_LINKS = [
+    ['#/home', 'Home', 'home'],
+    ['#/domains', 'Domains', 'domains'],
+    ['#/catalog', 'Catalogue', 'catalog'],
+    ['#/manufacturers', 'Manufacturers', 'manufacturers'],
+    ['#/assistant', 'AI Assistant', 'assistant'],
+    ['#/about', 'About', 'about']
+  ];
+
+  function mountChrome() {
+    document.getElementById('nav').innerHTML =
+      '<nav class="nav"><div class="nav-inner">' +
+        '<a class="brand" href="#/home"><span class="brand-mark">◈</span>' +
+          '<span>QORINO<small>MACHINERIES &amp; ROBOTICS</small></span></a>' +
+        '<div class="nav-links">' +
+          NAV_LINKS.map(function (l) {
+            return '<a class="nav-link" data-v="' + l[2] + '" href="' + l[0] + '">' + l[1] + '</a>';
+          }).join('') +
+          '<a class="nav-cta" href="#/catalog">210,000 machines →</a>' +
+        '</div>' +
+      '</div></nav>';
+
+    document.getElementById('footer').innerHTML =
+      '<footer class="footer"><div class="wrap">' +
+        '<div class="foot-grid">' +
+          '<div class="foot-col"><div class="brand" style="margin-bottom:14px">' +
+            '<span class="brand-mark">◈</span><span>QORINO<small>MACHINERIES &amp; ROBOTICS</small></span></div>' +
+            '<p style="font-size:.86rem;max-width:340px;color:var(--muted)">' +
+            '210 sectors · 5,250 machine families · 210,000 distinct machines and robots, ' +
+            'with live pricing, exploded diagrams, worldwide performance analytics, buying ' +
+            'channels, lifecycle management and an on-board AI assistant.</p></div>' +
+          '<div class="foot-col"><h5>Platform</h5>' +
+            '<a href="#/catalog">Full Catalogue</a><a href="#/manufacturers">Manufacturers</a>' +
+            '<a href="#/assistant">AI Assistant</a><a href="#/about">About Qorino</a></div>' +
+          '<div class="foot-col"><h5>Domains</h5>' +
+            Qorino.DOMAINS.slice(0, 5).map(function (d) {
+              return '<a href="#/domain/' + d.id + '">' + d.name + '</a>';
+            }).join('') + '</div>' +
+          '<div class="foot-col"><h5>Support</h5>' +
+            '<a href="#/assistant">Diagnose a Problem</a><a href="#/about">Contact</a>' +
+            '<a href="#/about">Training</a><a href="#/about">Procurement Desk</a></div>' +
+        '</div>' +
+        '<div class="foot-bottom"><span>© ' + new Date().getFullYear() +
+          ' Qorino Machineries &amp; Robotics — demo dataset. All figures and manufacturers are illustrative.</span>' +
+          '<span>Live pricing is simulated; integrate a real API at the pricing layer.</span></div>' +
+      '</div></footer>';
+  }
+
+  function setActiveNav(view) {
+    var links = document.querySelectorAll('.nav-link');
+    for (var i = 0; i < links.length; i++) {
+      links[i].classList.toggle('active', links[i].dataset.v === view);
+    }
+  }
+
+  /* Update every visible price element on an interval so prices "move" */
+  function startLivePriceTicker() {
+    setInterval(function () {
+      var els = document.querySelectorAll('[data-price-id]');
+      for (var i = 0; i < els.length; i++) {
+        var id = Number(els[i].getAttribute('data-price-id'));
+        var next = money(Qorino.livePriceOf(id));
+        if (els[i].textContent !== next) {
+          els[i].textContent = next;
+          els[i].classList.add('price-flash');
+          (function (el) { setTimeout(function () { el.classList.remove('price-flash'); }, 900); })(els[i]);
+        }
+      }
+    }, 12000);
+  }
+
+  return {
+    money: money, num: num, machineCard: machineCard, toast: toast, liveTag: liveTag,
+    mountChrome: mountChrome, setActiveNav: setActiveNav, startLivePriceTicker: startLivePriceTicker
+  };
+})();
+
+/* =========================================================================
+   ROUTER + VIEWS
+   ========================================================================= */
+(function () {
+  "use strict";
+
+  var app = document.getElementById('app');
+
+  /* ======================= HOME ======================= */
+  function viewHome() {
+    var s = Qorino.stats();
+    var feed = Qorino.random(9);
+
+    var FEATURES = [
+      ['◈', 'Deep Machine Dossiers', 'Every machine has its own popup page: full article, specification table, dimensions, materials, control system, certifications and lifecycle notes.'],
+      ['⛭', 'Internal &amp; External Diagrams', 'Exploded-view schematics show what is inside the housing — drives, spindles, servos, manifolds, sensors and control cabinets.'],
+      ['💹', 'Live Market Pricing', 'Prices are driven by a continuous live-market feed. They update on-page as the underlying market drifts, with a LIVE indicator and 24-hour change figure.'],
+      ['📈', 'Worldwide Performance Analytics', 'Market-share donuts, adoption trend curves, OEE benchmarks, MTBF, energy per unit and total-cost-of-ownership curves.'],
+      ['🛒', 'Buying Channels', 'Verified new and refurbished sources with region, lead time, indicative price band and condition grading.'],
+      ['🛠', 'Management &amp; Support', 'Maintenance schedules, spare-part strategy, safety protocols, operator training modules and a live problem→solution desk.']
+    ];
+
+    var STEPS = [
+      ['01', 'Pick a domain', '14 industrial domains, 210 sectors. Start where your requirement lives.'],
+      ['02', 'Open a sector', 'Each sector contains 25 distinct machine families × 40 capacity/automation variants = 1,000 unique machines.'],
+      ['03', 'Study the analytics', 'Compare market share, efficiency benchmarks and total cost of ownership worldwide.'],
+      ['04', 'Check buying sources', 'See verified new &amp; refurbished channels with lead times and live price bands.'],
+      ['05', 'Ask the AI assistant', 'Describe your problem in plain language and get machine recommendations or fixes.'],
+      ['06', 'Plan the lifecycle', 'Follow the maintenance plan, safety protocol and operator training path.']
+    ];
+
+    var FEATURED = Qorino.random(8);
+
+    return '' +
+    '<header class="hero"><div class="hero-grid">' +
+      '<div class="hero-copy">' +
+        '<span class="pill">◈ QORINO · MACHINERY INTELLIGENCE PLATFORM</span>' +
+        '<h1 class="glitch">Every Machine.<br>Every Robot.<br>Every Detail.</h1>' +
+        '<p class="lede">Qorino is a living encyclopaedia of industrial machinery, heavy equipment and robotics. ' +
+        'Explore <strong>' + App.num(s.machines) + ' distinct machines</strong> across ' +
+        s.sectors + ' sectors and ' + s.domains + ' domains — with engineering specs, exploded diagrams, ' +
+        'live pricing, worldwide performance analytics, buying channels, maintenance management, ' +
+        'technical support and an on-board AI assistant.</p>' +
+        '<div class="hero-actions">' +
+          '<a class="btn btn-primary" href="#/catalog">Explore the Catalogue →</a>' +
+          '<a class="btn btn-ghost" href="#/assistant">Ask the AI Assistant</a>' +
+        '</div>' +
+        '<div class="stats-row">' +
+          '<div class="stat"><b>' + App.num(s.machines) + '</b><span>Machines</span></div>' +
+          '<div class="stat"><b>' + App.num(s.sectors) + '</b><span>Sectors</span></div>' +
+          '<div class="stat"><b>' + App.num(s.families) + '</b><span>Families</span></div>' +
+          '<div class="stat"><b>' + App.num(s.manufacturers) + '</b><span>Manufacturers</span></div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="hero-visual">' +
+        '<div class="orb orb-a"></div><div class="orb orb-b"></div><div class="orb orb-c"></div>' +
+        '<div class="hero-card glass">' +
+          '<div class="hc-head"><span class="dot"></span><span class="dot"></span><span class="dot"></span>' +
+            '<span class="hc-title">LIVE FEED · PRICES UPDATE IN REAL TIME</span></div>' +
+          '<div class="hc-feed">' +
+            feed.map(function (m, i) {
+              return '<a class="feed-row" href="#/machine/' + m.id + '" style="--d:' + (i * 0.11) + 's">' +
+                '<span class="feed-dot" style="background:hsl(' + m.hue + ' 90% 62%);color:hsl(' + m.hue + ' 90% 62%)"></span>' +
+                '<span class="feed-name">' + m.name + '</span>' +
+                '<span class="feed-price" data-price-id="' + m.id + '">' +
+                  App.money(Qorino.livePriceOf(m.id)) + '</span></a>';
+            }).join('') +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div></header>' +
+
+    '<section class="section"><div class="wrap">' +
+      '<div class="section-head"><h2>What Qorino Does</h2>' +
+      '<p>Six layers of machinery knowledge — from a single bolt specification to a plant-wide investment case.</p></div>' +
+      '<div class="grid grid-3">' +
+        FEATURES.map(function (f) {
+          return '<article class="card feature-card"><span class="fc-icon">' + f[0] + '</span>' +
+            '<h3>' + f[1] + '</h3><p>' + f[2] + '</p></article>';
+        }).join('') +
+      '</div>' +
+    '</div></section>' +
+
+    '<section class="section"><div class="wrap">' +
+      '<div class="section-head"><h2>14 Domains · ' + Qorino.stats().sectors + ' Sectors · ' +
+        App.num(Qorino.stats().machines) + ' Machines</h2>' +
+      '<p>Every sector holds 1,000 unique machines across 25 distinct functional families. ' +
+      'Drill into any domain to browse its sectors.</p></div>' +
+      '<div class="grid grid-3">' +
+        Qorino.DOMAINS.map(function (d) {
+          var count = d.sectors.length * 1000;
+          return '<a class="card domain-card" href="#/domain/' + d.id + '" style="--hue:' + d.hue + '">' +
+            '<div class="dc-top"><span class="dc-icon">' + d.icon + '</span>' +
+            '<span class="dc-count">' + App.num(count) + ' machines</span></div>' +
+            '<h3>' + d.name + '</h3>' +
+            '<p>' + d.sectors.length + ' sectors · ' + (d.sectors.length * 25) + ' machine families</p>' +
+            '<span class="dc-link">Explore domain →</span></a>';
+        }).join('') +
+      '</div>' +
+    '</div></section>' +
+
+    '<section class="section"><div class="wrap">' +
+      '<div class="section-head"><h2>Featured Machines · Live Prices</h2>' +
+      '<p>A rotating selection from the catalogue. Prices update continuously from the live feed.</p></div>' +
+      '<div class="grid grid-4">' + FEATURED.map(App.machineCard).join('') + '</div>' +
+      '<div class="center mt-32"><a class="btn btn-primary" href="#/catalog">See all ' +
+        App.num(Qorino.stats().machines) + ' machines →</a></div>' +
+    '</div></section>' +
+
+    '<section class="section"><div class="wrap">' +
+      '<div class="section-head"><h2>How To Use Qorino</h2>' +
+      '<p>Six steps from curiosity to a confident purchase decision.</p></div>' +
+      '<div class="steps">' +
+        STEPS.map(function (st) {
+          return '<div class="step card"><span class="step-num">' + st[0] + '</span>' +
+            '<h4>' + st[1] + '</h4><p>' + st[2] + '</p></div>';
+        }).join('') +
+      '</div>' +
+    '</div></section>' +
+
+    '<section class="section"><div class="wrap">' +
+      '<div class="company glass">' +
+        '<div class="company-left">' +
+          '<span class="pill">ABOUT QORINO</span>' +
+          '<h2>We turn machine complexity into machine clarity.</h2>' +
+          '<p>Qorino Machineries &amp; Robotics is a machinery intelligence company. We build structured, ' +
+          'comparable, decision-ready dossiers on industrial machinery and robotics — new and legacy — ' +
+          'so buyers, plant engineers, students and investors can evaluate equipment on evidence ' +
+          'instead of brochures.</p>' +
+          '<p>Every machine in our catalogue carries a specification sheet, an exploded-view diagram, ' +
+          'worldwide market analytics, live pricing, verified purchasing channels, a maintenance &amp; ' +
+          'lifecycle plan, and a support desk.</p>' +
+          '<div class="company-tags"><span>Machinery Research</span><span>Robotics Advisory</span>' +
+          '<span>Technical Support</span><span>Procurement Intelligence</span>' +
+          '<span>Maintenance Management</span><span>Training</span></div>' +
+        '</div>' +
+        '<div class="company-right">' +
+          '<div class="mini-stat"><b>' + App.num(s.machines) + '</b><span>Machine dossiers</span></div>' +
+          '<div class="mini-stat"><b>' + App.num(s.manufacturers) + '</b><span>Manufacturers</span></div>' +
+          '<div class="mini-stat"><b>' + s.sectors + '</b><span>Sectors</span></div>' +
+          '<div class="mini-stat"><b>' + App.num(s.families) + '</b><span>Machine families</span></div>' +
+        '</div>' +
+      '</div>' +
+    '</div></section>';
+  }
+
+  /* ======================= DOMAINS ======================= */
+  function viewDomains() {
+    return '<section class="section"><div class="wrap">' +
+      '<div class="section-head"><h2>All ' + Qorino.DOMAINS.length + ' Industrial Domains</h2>' +
+      '<p>Each domain contains 15 sectors, each sector 1,000 distinct machines.</p></div>' +
+      '<div class="grid grid-3">' +
+        Qorino.DOMAINS.map(function (d) {
+          return '<a class="card domain-card" href="#/domain/' + d.id + '" style="--hue:' + d.hue + '">' +
+            '<div class="dc-top"><span class="dc-icon">' + d.icon + '</span>' +
+            '<span class="dc-count">' + App.num(d.sectors.length * 1000) + ' machines</span></div>' +
+            '<h3>' + d.name + '</h3>' +
+            '<p>' + d.sectors.length + ' sectors · ' + (d.sectors.length * 25) + ' machine families</p>' +
+            '<span class="dc-link">Explore domain →</span></a>';
+        }).join('') +
+      '</div></div></section>';
+  }
+
+  /* ======================= DOMAIN (sector list) ======================= */
+  function viewDomain(domainId) {
+    var domain = null;
+    for (var i = 0; i < Qorino.DOMAINS.length; i++) {
+      if (Qorino.DOMAINS[i].id === domainId) { domain = Qorino.DOMAINS[i]; break; }
+    }
+    if (!domain) {
+      app.innerHTML = '<section class="section"><div class="wrap"><h2>Domain not found</h2>' +
+        '<p><a href="#/domains" style="color:var(--cyan)">Back to domains →</a></p></div></section>';
+      return;
+    }
+
+    var sectors = Qorino.SECTORS.filter(function (s) { return s.domainId === domainId; });
+
+    return '<section class="section"><div class="wrap">' +
+      '<div class="breadcrumb"><a href="#/home">Home</a> › <a href="#/domains">Domains</a> › ' + domain.name + '</div>' +
+      '<div class="section-head"><h2>' + domain.icon + ' ' + domain.name + '</h2>' +
+      '<p>' + sectors.length + ' sectors · ' + (sectors.length * 25) + ' machine families · ' +
+        App.num(sectors.length * 1000) + ' distinct machines. Pick a sector to browse.</p></div>' +
+      '<div class="grid grid-3">' +
+        sectors.map(function (s) {
+          return '<a class="card sector-card" href="#/sector/' + s.id + '" style="--hue:' + s.hue + '">' +
+            '<h3>' + s.icon + ' ' + s.name + '</h3>' +
+            '<div class="sc-sub">' + s.domain + '</div>' +
+            '<div class="sc-fam">25 families · 1,000 machines</div>' +
+            '<div class="sc-count">e.g. ' + s.families.slice(0, 3).map(function (f) {
+              return f.name.split(' ')[0];
+            }).join(' · ') + ' …</div></a>';
+        }).join('') +
+      '</div></div></section>';
+  }
+
+  /* ======================= CATALOG (sector-scoped) ======================= */
+  var catState = {
+    sectorId: null,
+    q: '',
+    cond: 'all',
+    sort: 'family',
+    page: 1,
+    per: 24
+  };
+
+  function currentSector() {
+    if (catState.sectorId && Qorino.sectorById(catState.sectorId)) {
+      return Qorino.sectorById(catState.sectorId);
+    }
+    return Qorino.SECTORS[0];
+  }
+
+  function filterSectorMachines() {
+    var sec = currentSector();
+    var start = sec.index * 1000;
+    var ids = [];
+    var qLower = catState.q.trim().toLowerCase();
+
+    for (var i = 0; i < 1000; i++) {
+      var id = start + i;
+      if (catState.cond !== 'all') {
+        var isRef = (id % 5 === 0);
+        if (catState.cond === 'New' && isRef) continue;
+        if (catState.cond === 'Refurbished' && !isRef) continue;
+      }
+      if (qLower && Qorino.searchName(id).indexOf(qLower) === -1) continue;
+      ids.push(id);
+    }
+
+    var sort = catState.sort;
+    if (sort === 'price-asc') {
+      ids.sort(function (a, b) { return Qorino.priceOf(a) - Qorino.priceOf(b); });
+    } else if (sort === 'price-desc') {
+      ids.sort(function (a, b) { return Qorino.priceOf(b) - Qorino.priceOf(a); });
+    } else if (sort === 'capacity') {
+      ids.sort(function (a, b) { return Qorino.variantOf(a) - Qorino.variantOf(b); });
+    } else {
+      // family (default): family asc, then variant asc
+      ids.sort(function (a, b) {
+        var fa = Qorino.familyIndexOf(a), fb = Qorino.familyIndexOf(b);
+        if (fa !== fb) return fa - fb;
+        return Qorino.variantOf(a) - Qorino.variantOf(b);
+      });
+    }
+    return ids;
+  }
+
+  function refreshCatalog() {
+    var ids = filterSectorMachines();
+    var pages = Math.max(1, Math.ceil(ids.length / catState.per));
+    if (catState.page > pages) catState.page = pages;
+    var start = (catState.page - 1) * catState.per;
+    var slice = ids.slice(start, start + catState.per);
+
+    document.getElementById('catCount').innerHTML =
+      '<b>' + App.num(ids.length) + '</b> machines · page ' + catState.page + ' of ' + pages;
+
+    document.getElementById('catGrid').innerHTML = slice.length
+      ? slice.map(function (id) { return App.machineCard(Qorino.machine(id)); }).join('')
+      : '<p class="empty">No machines match your filters.</p>';
+
+    var pager = document.getElementById('catPager');
+    var html = '<button class="pg" data-p="' + (catState.page - 1) + '"' +
+      (catState.page === 1 ? ' disabled' : '') + '>‹</button>';
+    var s = Math.max(1, catState.page - 3), e = Math.min(pages, s + 6);
+    if (s > 1) html += '<button class="pg" data-p="1">1</button><span style="padding:0 6px;color:var(--muted)">…</span>';
+    for (var p = s; p <= e; p++) {
+      html += '<button class="pg' + (p === catState.page ? ' active' : '') + '" data-p="' + p + '">' + p + '</button>';
+    }
+    if (e < pages) html += '<span style="padding:0 6px;color:var(--muted)">…</span><button class="pg" data-p="' + pages + '">' + pages + '</button>';
+    html += '<button class="pg" data-p="' + (catState.page + 1) + '"' +
+      (catState.page === pages ? ' disabled' : '') + '>›</button>';
+    pager.innerHTML = html;
+
+    var btns = pager.querySelectorAll('.pg');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', function () {
+        var pg = Number(this.getAttribute('data-p'));
+        if (isNaN(pg)) return;
+        catState.page = pg;
+        refreshCatalog();
+        document.getElementById('catGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+  }
+
+  function viewCatalog(sectorId) {
+    if (sectorId && Qorino.sectorById(sectorId)) catState.sectorId = sectorId;
+    if (!catState.sectorId) catState.sectorId = Qorino.SECTORS[0].id;
+    catState.page = 1;
+
+    var secOptions = Qorino.SECTORS.map(function (s) {
+      return '<option value="' + s.id + '"' +
+        (catState.sectorId === s.id ? ' selected' : '') + '>' +
+        s.domain + ' — ' + s.name + '</option>';
+    }).join('');
+
+    var sec = currentSector();
+
+    app.innerHTML = '' +
+    '<section class="section"><div class="wrap">' +
+      '<div class="section-head"><h2>Catalogue · ' + sec.name + '</h2>' +
+      '<p>' + sec.domain + ' · 25 families · 1,000 distinct machines. Prices are live and update every 12 seconds.</p></div>' +
+
+      '<div class="filters">' +
+        '<div class="field"><label for="qInput">Search within this sector</label>' +
+          '<input id="qInput" type="text" placeholder="Machine, manufacturer, family…" value="' +
+          catState.q.replace(/"/g, '&quot;') + '" /></div>' +
+        '<div class="field"><label for="secSel">Sector (210 available)</label>' +
+          '<select id="secSel">' + secOptions + '</select></div>' +
+        '<div class="field"><label for="condSel">Condition</label>' +
+          '<select id="condSel">' +
+            '<option value="all">Any condition</option>' +
+            '<option value="New"' + (catState.cond === 'New' ? ' selected' : '') + '>New</option>' +
+            '<option value="Refurbished"' + (catState.cond === 'Refurbished' ? ' selected' : '') + '>Refurbished</option>' +
+          '</select></div>' +
+        '<div class="field"><label for="sortSel">Sort by</label>' +
+          '<select id="sortSel">' +
+            '<option value="family">Family → variant</option>' +
+            '<option value="price-asc">Price ↑</option>' +
+            '<option value="price-desc">Price ↓</option>' +
+            '<option value="capacity">Capacity tier</option>' +
+          '</select></div>' +
+      '</div>' +
+
+      '<p class="result-count" id="catCount"></p>' +
+      '<div class="grid grid-4" id="catGrid"></div>' +
+      '<div class="pager" id="catPager"></div>' +
+    '</div></section>';
+
+    document.getElementById('sortSel').value = catState.sort;
+    refreshCatalog();
+
+    var q = document.getElementById('qInput');
+    var tmr;
+    q.addEventListener('input', function () {
+      clearTimeout(tmr);
+      var v = this.value;
+      tmr = setTimeout(function () {
+        catState.q = v; catState.page = 1; refreshCatalog();
+      }, 180);
+    });
+    document.getElementById('secSel').addEventListener('change', function () {
+      catState.sectorId = this.value;
+      catState.page = 1;
+      location.hash = '#/sector/' + catState.sectorId;
+    });
+    document.getElementById('condSel').addEventListener('change', function () {
+      catState.cond = this.value; catState.page = 1; refreshCatalog();
+    });
+    document.getElementById('sortSel').addEventListener('change', function () {
+      catState.sort = this.value; catState.page = 1; refreshCatalog();
+    });
+  }
+
+  function viewSector(sectorId) {
+    catState.sectorId = sectorId;
+    viewCatalog(sectorId);
+  }
+
+  /* ======================= MACHINE DETAIL ======================= */
+  function diagramSVG(m) {
+    var h = m.hue;
+    var h2 = (h + 55) % 360;
+    return '<svg viewBox="0 0 640 330" class="diagram" role="img" aria-label="Exploded schematic of ' + m.name + '">' +
+      '<defs><linearGradient id="dg" x1="0" y1="0" x2="1" y2="1">' +
+      '<stop offset="0" stop-color="hsl(' + h + ' 90% 65%)"/>' +
+      '<stop offset="1" stop-color="hsl(' + h2 + ' 90% 58%)"/></linearGradient></defs>' +
+      '<rect x="180" y="70" width="280" height="190" rx="16" fill="none" stroke="url(#dg)" stroke-width="2.5"/>' +
+      '<rect x="202" y="92" width="236" height="146" rx="10" fill="none" stroke="hsl(' + h + ' 90% 65% / .35)" stroke-width="1.4" stroke-dasharray="6 6"/>' +
+      '<circle cx="320" cy="165" r="42" fill="none" stroke="url(#dg)" stroke-width="2.5"/>' +
+      '<circle cx="320" cy="165" r="17" fill="hsl(' + h + ' 90% 65% / .28)" stroke="url(#dg)" stroke-width="1.6"/>' +
+      '<circle cx="245" cy="120" r="15" fill="none" stroke="hsl(' + h2 + ' 90% 62% / .85)" stroke-width="2"/>' +
+      '<circle cx="397" cy="212" r="15" fill="none" stroke="hsl(' + h2 + ' 90% 62% / .85)" stroke-width="2"/>' +
+      '<circle cx="228" cy="222" r="7" fill="hsl(' + h + ' 90% 65% / .8)"/>' +
+      '<circle cx="412" cy="110" r="7" fill="hsl(' + h + ' 90% 65% / .8)"/>' +
+      '<circle cx="320" cy="248" r="7" fill="hsl(' + h + ' 90% 65% / .8)"/>' +
+      '<line x1="180" y1="120" x2="90" y2="120" stroke="hsl(' + h + ' 60% 70% / .55)" stroke-width="1"/>' +
+      '<line x1="460" y1="222" x2="556" y2="222" stroke="hsl(' + h + ' 60% 70% / .55)" stroke-width="1"/>' +
+      '<line x1="320" y1="70" x2="320" y2="34" stroke="hsl(' + h + ' 60% 70% / .55)" stroke-width="1"/>' +
+      '<line x1="320" y1="260" x2="320" y2="300" stroke="hsl(' + h + ' 60% 70% / .55)" stroke-width="1"/>' +
+      '<text class="dg-label" x="86" y="116" text-anchor="end">DRIVE UNIT</text>' +
+      '<text class="dg-label" x="560" y="218">CONTROL CABINET</text>' +
+      '<text class="dg-label" x="320" y="28" text-anchor="middle">TOOL HEAD / SPINDLE</text>' +
+      '<text class="dg-label" x="320" y="314" text-anchor="middle">COOLANT &amp; SENSOR LOOP</text>' +
+      '<text class="dg-label" x="320" y="169" text-anchor="middle" style="fill:#fff">MAIN AXIS</text>' +
+      '</svg>';
+  }
+
+  function donutHTML(m) {
+    var r = (m.id * 7) % 13;
+    var a = 34 + r, b = 21 + (r % 7), c = 16 + (r % 5);
+    var d = 100 - a - b - c;
+    var stops = [
+      ['hsl(' + m.hue + ' 90% 62%)', a],
+      ['hsl(' + ((m.hue + 60) % 360) + ' 90% 60%)', b],
+      ['hsl(' + ((m.hue + 140) % 360) + ' 90% 62%)', c],
+      ['hsl(' + ((m.hue + 220) % 360) + ' 90% 62%)', d]
+    ];
+    var acc = 0;
+    var grad = stops.map(function (s) {
+      var from = acc; acc += s[1];
+      return s[0] + ' ' + from + '% ' + acc + '%';
+    }).join(', ');
+    return '<div class="donut" style="background:conic-gradient(' + grad + ')"></div>' +
+      '<div class="donut-legend">' +
+        stops.map(function (s, i) {
+          var labels = ['This OEM', 'OEM #2', 'OEM #3', 'Others'];
+          return '<div><i style="background:' + s[0] + '"></i>' + labels[i] + ' — ' + s[1] + '%</div>';
+        }).join('') +
+      '</div>';
+  }
+
+  function trendSVG(m) {
+    var r = function (n) { return ((Math.sin(m.id * 0.7 + n) + 1) / 2); };
+    var pts = [];
+    for (var i = 0; i < 9; i++) {
+      var x = 14 + i * 53;
+      var y = 110 - (18 + r(i) * 78);
+      pts.push(x.toFixed(0) + ',' + y.toFixed(0));
+    }
+    var poly = pts.join(' ');
+    var area = '14,120 ' + poly + ' ' + (14 + 8 * 53) + ',120';
+    return '<svg viewBox="0 0 470 130" style="width:100%;height:auto">' +
+      '<defs><linearGradient id="tg" x1="0" y1="0" x2="0" y2="1">' +
+      '<stop offset="0" stop-color="hsl(' + m.hue + ' 90% 62%)" stop-opacity=".45"/>' +
+      '<stop offset="1" stop-color="hsl(' + m.hue + ' 90% 62%)" stop-opacity="0"/></linearGradient></defs>' +
+      '<polygon points="' + area + '" fill="url(#tg)"/>' +
+      '<polyline points="' + poly + '" fill="none" stroke="hsl(' + m.hue + ' 90% 65%)" stroke-width="2.5" ' +
+      'stroke-linejoin="round" stroke-linecap="round"/>' +
+      '<line x1="14" y1="120" x2="456" y2="120" stroke="rgba(120,140,255,.24)"/>' +
+      '</svg>' +
+      '<div style="display:flex;justify-content:space-between;font-size:.68rem;color:var(--muted);margin-top:6px">' +
+      '<span>2017</span><span>2020</span><span>2023</span><span>2026</span></div>';
+  }
+
+  function barRow(label, value, pct, suffix) {
+    return '<div class="bar-row"><div class="bl"><span>' + label + '</span><b>' + value + (suffix || '') + '</b></div>' +
+      '<div class="bar-track"><div class="bar-fill" style="width:' + pct + '%"></div></div></div>';
+  }
+
+  function diagnoseText(text, m) {
+    var t = text.toLowerCase();
+    var out = [];
+    if (/vibrat|shak|wobbl/.test(t)) {
+      out.push('Vibration above 60% speed most often traces to <strong>axis misalignment, worn bearings or an unbalanced tool head</strong>. Stop the machine, isolate power, and check coupling alignment and bearing play before restarting.');
+    }
+    if (/overheat|hot|temperature|thermal/.test(t)) {
+      out.push('Thermal faults usually indicate <strong>coolant flow restriction or blocked air path</strong>. Verify the coolant/sensor loop, clean filters, and confirm the cabinet fan is running.');
+    }
+    if (/noise|sound|rattle/.test(t)) {
+      out.push('Abnormal noise points to <strong>loose fasteners, a failing bearing, or gear wear</strong>. Perform a stethoscope check along the drive unit and re-torque the mounting bolts to spec.');
+    }
+    if (/error|fault|code|e-\d+|alarm/.test(t)) {
+      out.push('For a logged fault code, <strong>record the exact code and the operating state at the moment it appeared</strong>. Recurring codes within a single shift almost always indicate an intermittent sensor rather than a mechanical failure.');
+    }
+    if (!out.length) {
+      out.push('Based on your description, begin with the <strong>three-step triage</strong>: (1) capture the fault log, (2) verify supply power and coolant flow, (3) inspect the drive unit for play or heat discolouration. This resolves the majority of field issues on the <strong>' + m.name + '</strong>.');
+    }
+    out.push('If the problem persists after triage, open a Qorino technical ticket — an engineer will review the fault log against the benchmark dataset for the <em>' + m.family + '</em> family.');
+    return out.join('<br><br>');
+  }
+
+  function viewMachine(id) {
+    var m = Qorino.machine(id);
+    if (!m) {
+      app.innerHTML = '<section class="section"><div class="wrap"><h2>Machine not found</h2>' +
+        '<p>The requested dossier does not exist. <a href="#/catalog" style="color:var(--cyan)">Return to the catalogue →</a></p></div></section>';
+      return;
+    }
+
+    var related = [];
+    var start = Qorino.sectorById(m.sector).index * 1000;
+    for (var i = 0; i < 1000 && related.length < 4; i++) {
+      var rid = start + i;
+      if (rid === m.id) continue;
+      if (Qorino.familyIndexOf(rid) === m.familyId) related.push(Qorino.machine(rid));
+    }
+
+    var live = Qorino.livePriceOf(m.id);
+    var change = Qorino.livePriceOf(m.id) - Qorino.priceOf(m.id);
+
+    app.innerHTML = '' +
+    '<header class="m-hero"><div class="wrap">' +
+      '<div class="breadcrumb"><a href="#/home">Home</a> › ' +
+        '<a href="#/domain/' + Qorino.sectorById(m.sector).domainId + '">' + m.domain + '</a> › ' +
+        '<a href="#/sector/' + m.sector + '">' + m.sectorName + '</a> › ' + m.name + '</div>' +
+      '<h1 class="m-title">' + m.name + '</h1>' +
+      '<p class="m-sub">' + m.family + ' · ' + m.sectorName + ' · manufactured by ' + m.oem + ' · ' + m.country + '</p>' +
+      '<div class="m-badges">' +
+        '<span>' + m.cond + '</span>' +
+        '<span>Model year ' + m.year + '</span>' +
+        '<span>★ ' + m.rating.toFixed(1) + ' / 5</span>' +
+        '<span class="live">Live price ' + App.money(live) + ' (' +
+          (change >= 0 ? '+' : '') + App.money(Math.abs(change)) + ' vs base)</span>' +
+        '<span>Lead time ~' + m.lead + ' weeks</span>' +
+      '</div>' +
+    '</div></header>' +
+
+    '<div class="wrap"><div class="m-layout">' +
+
+      '<div class="m-main">' +
+
+        '<div class="panel">' +
+          '<h3>Article</h3>' +
+          '<p>The <strong>' + m.name + '</strong> is a ' + m.family.toLowerCase() +
+          ' built by ' + m.oem + ' in ' + m.country + ', positioned in the ' +
+          m.sectorName.toLowerCase() + ' segment of the Qorino index. The model in this dossier is a ' +
+          m.year + ' ' + m.cond.toLowerCase() + ' unit rated at ' + m.power +
+          ' kW with an installed mass of approximately ' + App.num(m.weight) + ' kg.</p>' +
+          '<p>Machines of this class are bought for throughput, repeatability and uptime. ' +
+          'Qorino measures all three: the published benchmark operating efficiency for this family is ' +
+          m.oee + '%, with a mean time between failures of ' + App.num(m.mtbf) +
+          ' operating hours and an energy draw of ' + m.energy + ' kWh per production hour at nominal load.</p>' +
+          '<h4>How it works</h4>' +
+          '<p>The machine converts electrical power into controlled mechanical motion through a drive unit, ' +
+          'a main axis and a tool head, all supervised by a control cabinet that reads a sensor array. ' +
+          'The exploded schematic below shows these subsystems and how they are physically arranged inside the housing.</p>' +
+          '<h4>What it is used for</h4>' +
+          '<p>Typical deployments include continuous production lines, batch cells and standalone job-shop work ' +
+          'in ' + m.sectorName.toLowerCase() + '. Buyers usually evaluate it against two or three competing ' +
+          'models in the same family before committing capital.</p>' +
+          '<h4>Present benefits &amp; future outlook</h4>' +
+          '<p>Current-generation units benefit from servo-driven axes, remote diagnostics and modular tooling. ' +
+          'The next generation is expected to add predictive-maintenance telemetry and tighter energy metering, ' +
+          'which will materially lower the total cost of ownership over a ten-year horizon.</p>' +
+          '<h4>Proper use &amp; safety instructions</h4>' +
+          '<ol>' +
+            '<li>Verify supply voltage and phase rotation before first power-on.</li>' +
+            '<li>Commission the machine with the manufacturer\'s alignment and levelling procedure.</li>' +
+            '<li>Never bypass the interlocked safety guards while the main axis is energised.</li>' +
+            '<li>Follow the lubrication chart exactly — incorrect grease grades shorten bearing life.</li>' +
+            '<li>Log every fault code; recurring codes are the earliest signal of component wear.</li>' +
+          '</ol>' +
+        '</div>' +
+
+        '<div class="panel">' +
+          '<h3>Internal &amp; External Diagram</h3>' +
+          diagramSVG(m) +
+          '<p style="font-size:.82rem;color:var(--muted);margin:14px 0 0">' +
+          'Exploded schematic: housing envelope, drive unit, main axis, tool head, control cabinet and the ' +
+          'coolant/sensor loop. Values are illustrative for this demo dataset.</p>' +
+        '</div>' +
+
+        '<div class="panel">' +
+          '<h3>Worldwide Performance Analytics</h3>' +
+          '<h4>Market share (global, this family)</h4>' +
+          donutHTML(m) +
+          '<h4 style="margin-top:24px">Adoption trend</h4>' +
+          trendSVG(m) +
+          '<h4 style="margin-top:24px">Benchmarks</h4>' +
+          '<div class="bars">' +
+            barRow('Overall equipment effectiveness', m.oee, m.oee, '%') +
+            barRow('Energy efficiency index', 58 + (m.id % 34), 58 + (m.id % 34), ' / 100') +
+            barRow('Uptime reliability', Math.min(99, 70 + (m.mtbf / 400)), Math.min(99, 70 + (m.mtbf / 400)), '%') +
+            barRow('Operator satisfaction', Math.round(m.rating * 20), Math.round(m.rating * 20), '%') +
+          '</div>' +
+        '</div>' +
+
+        '<div class="panel">' +
+          '<h3>Live Buying Sources</h3>' +
+          '<p style="font-size:.82rem;color:var(--muted);margin:0 0 12px">' +
+          'Prices below are being pulled from the live market feed and drift continuously. ' +
+          'Base list price for this unit: <strong>' + App.money(m.price) + '</strong>.</p>' +
+          '<div class="buy-row"><div><div class="bv">' + m.oem + ' — factory direct</div>' +
+            '<div class="bm">' + m.country + ' · lead time ' + m.lead + ' weeks · warranty 24 months</div></div>' +
+            '<div style="text-align:right"><span class="tag new">NEW</span>' +
+            '<div class="bm" style="margin-top:5px"><span data-price-id="' + m.id + '">' +
+              App.money(live) + '</span> – ' +
+              App.money(Math.round(live * 1.18)) + '</div></div></div>' +
+          '<div class="buy-row"><div><div class="bv">Qorino verified reseller network</div>' +
+            '<div class="bm">Regional stock · inspection report included</div></div>' +
+            '<div style="text-align:right"><span class="tag ref">REFURB</span>' +
+            '<div class="bm" style="margin-top:5px">' +
+              App.money(Math.round(live * 0.52)) + ' – ' +
+              App.money(Math.round(live * 0.78)) + '</div></div></div>' +
+          '<div class="buy-row"><div><div class="bv">Auction &amp; secondary market</div>' +
+            '<div class="bm">Condition varies · buyer inspection required</div></div>' +
+            '<div style="text-align:right"><span class="tag live">LIVE</span>' +
+            '<div class="bm" style="margin-top:5px">' +
+              App.money(Math.round(live * 0.28)) + ' – ' +
+              App.money(Math.round(live * 0.55)) + '</div></div></div>' +
+        '</div>' +
+
+        '<div class="panel">' +
+          '<h3>Management &amp; Maintenance Plan</h3>' +
+          '<table class="maint-table"><thead><tr><th>Task</th><th>Interval</th><th>Owner</th></tr></thead><tbody>' +
+            '<tr><td>Visual inspection &amp; safety guard check</td><td>Daily</td><td>Operator</td></tr>' +
+            '<tr><td>Lubrication of main axis &amp; drive unit</td><td>250 h</td><td>Technician</td></tr>' +
+            '<tr><td>Sensor calibration &amp; fault-log review</td><td>1,000 h</td><td>Engineer</td></tr>' +
+            '<tr><td>Bearing &amp; belt replacement window</td><td>' + App.num(m.mtbf) + ' h</td><td>Service</td></tr>' +
+            '<tr><td>Full overhaul &amp; alignment</td><td>5 years</td><td>OEM</td></tr>' +
+          '</tbody></table>' +
+        '</div>' +
+
+        '<div class="panel">' +
+          '<h3>Technical Support — Describe Your Problem</h3>' +
+          '<p style="font-size:.88rem;color:var(--muted)">Tell us what the machine is doing. ' +
+          'The Qorino desk will suggest a diagnosis and next steps.</p>' +
+          '<form id="supportForm">' +
+            '<textarea id="supportText" rows="4" placeholder="e.g. The main axis vibrates above 60% speed and the fault log shows E-214."></textarea>' +
+            '<div style="margin-top:12px"><button class="btn btn-primary" type="submit">Get a diagnosis →</button></div>' +
+          '</form>' +
+          '<div id="supportReply" style="margin-top:18px"></div>' +
+        '</div>' +
+      '</div>' +
+
+      '<aside class="m-side"><div class="side-sticky">' +
+        '<div class="panel">' +
+          '<h3>Specifications</h3>' +
+          '<table class="spec-table"><tbody>' +
+            '<tr><td>Model</td><td>' + m.name.split(' ').pop() + '</td></tr>' +
+            '<tr><td>Family</td><td>' + m.family + '</td></tr>' +
+            '<tr><td>Sector</td><td>' + m.sectorName + '</td></tr>' +
+            '<tr><td>Domain</td><td>' + m.domain + '</td></tr>' +
+            '<tr><td>Manufacturer</td><td>' + m.oem + '</td></tr>' +
+            '<tr><td>Origin</td><td>' + m.country + '</td></tr>' +
+            '<tr><td>Condition</td><td>' + m.cond + '</td></tr>' +
+            '<tr><td>Model year</td><td>' + m.year + '</td></tr>' +
+            '<tr><td>Rated power</td><td>' + m.power + ' kW</td></tr>' +
+            '<tr><td>Installed mass</td><td>' + App.num(m.weight) + ' kg</td></tr>' +
+            '<tr><td>Energy draw</td><td>' + m.energy + ' kWh/h</td></tr>' +
+            '<tr><td>Base list price</td><td>' + App.money(m.price) + '</td></tr>' +
+            '<tr><td>Live price</td><td><span class="price" data-price-id="' + m.id + '">' +
+              App.money(live) + '</span></td></tr>' +
+          '</tbody></table>' +
+          '<div style="margin-top:14px">' + App.liveTag() + '</div>' +
+        '</div>' +
+        '<div class="panel">' +
+          '<h3>Quick Actions</h3>' +
+          '<div style="display:flex;flex-direction:column;gap:10px">' +
+            '<a class="btn btn-primary" href="#/sector/' + m.sector + '">Compare in sector</a>' +
+            '<a class="btn btn-ghost" href="#/assistant">Ask the AI assistant</a>' +
+            '<a class="btn btn-ghost" href="#/manufacturers">See manufacturer</a>' +
+          '</div>' +
+        '</div>' +
+        (related.length ? '<div class="panel"><h3>Related Machines</h3>' +
+          related.map(function (x) {
+            return '<a href="#/machine/' + x.id + '" style="display:flex;justify-content:space-between;' +
+              'gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:.83rem">' +
+              '<span style="color:#c3c9e8">' + x.name + '</span>' +
+              '<span style="color:var(--cyan)" data-price-id="' + x.id + '">' +
+                App.money(Qorino.livePriceOf(x.id)) + '</span></a>';
+          }).join('') + '</div>' : '') +
+      '</div></aside>' +
+
+    '</div></div>';
+
+    document.getElementById('supportForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var txt = document.getElementById('supportText').value.trim();
+      if (!txt) { App.toast('Please describe the problem first.'); return; }
+      document.getElementById('supportReply').innerHTML =
+        '<div class="msg bot"><strong>Qorino Support Desk</strong><br>' + diagnoseText(txt, m) + '</div>';
+      App.toast('Diagnosis generated.');
+    });
+  }
+
+  /* ======================= ASSISTANT ======================= */
+  function viewAssistant() {
+    app.innerHTML = '' +
+    '<section class="section"><div class="wrap" style="max-width:900px">' +
+      '<div class="section-head"><h2>Qorino AI Assistant</h2>' +
+      '<p>Describe a machine you need, or a problem you have. The assistant searches the ' +
+      App.num(Qorino.stats().machines) + '-machine catalogue and returns candidate dossiers plus practical advice.</p></div>' +
+
+      '<div class="panel">' +
+        '<div class="chat-log" id="chatLog">' +
+          '<div class="msg bot"><strong>Qorino Assistant</strong><br>' +
+          'Hello. I can help you choose machinery, compare families, or troubleshoot a fault. ' +
+          'Try a suggestion below, or just type what you need.</div>' +
+        '</div>' +
+        '<div class="chips" id="chips">' +
+          ['I need a machine to package biscuits at 200 packs per minute',
+           'My CNC machine vibrates at high spindle speed',
+           'Best robotics options for a warehouse picking line',
+           'PCB manufacturing equipment under $150k',
+           'Robot vacuum cleaner with good suction',
+           'Textile dyeing machine for cotton fabric'].map(function (c) {
+            return '<span class="chip">' + c + '</span>';
+          }).join('') +
+        '</div>' +
+        '<div class="chat-input">' +
+          '<textarea id="chatText" placeholder="Type your question…"></textarea>' +
+          '<button class="btn btn-primary" id="chatSend">Send →</button>' +
+        '</div>' +
+      '</div>' +
+      '<p style="font-size:.78rem;color:var(--muted);margin-top:18px">' +
+      'The assistant is a deterministic keyword-and-catalogue matcher running entirely in your browser. It does not send data anywhere.</p>' +
+    '</div></section>';
+
+    var log = document.getElementById('chatLog');
+    var input = document.getElementById('chatText');
+
+    function push(role, html) {
+      var d = document.createElement('div');
+      d.className = 'msg ' + role;
+      d.innerHTML = html;
+      log.appendChild(d);
+      d.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function answer(text) {
+      var t = text.toLowerCase();
+
+      // Score families across all 5,250 names
+      var scored = [];
+      for (var i = 0; i < Qorino.FAMILIES.length; i++) {
+        var f = Qorino.FAMILIES[i];
+        var words = f.name.toLowerCase().split(/\s+/);
+        var score = 0;
+        for (var w = 0; w < words.length; w++) {
+          if (words[w].length > 3 && t.indexOf(words[w]) > -1) score += 4;
+        }
+        if (t.indexOf(f.sectorId.replace(/-/g, ' ')) > -1) score += 3;
+        if (score > 0) scored.push({ f: f, s: score });
+      }
+      scored.sort(function (a, b) { return b.s - a.s; });
+      var top = scored.slice(0, 3);
+
+      if (!top.length) {
+        return 'I could not match that to a specific family. Try naming a machine type ' +
+          '(e.g. "loom", "reactor", "robot arm") or a sector (e.g. "textile printing", "medical imaging"). ' +
+          'You can also browse the <a href="#/catalog" style="color:var(--cyan)">full catalogue</a>.';
+      }
+
+      var links = top.map(function (x) {
+        // Find a machine in this family
+        var sec = Qorino.sectorById(x.f.sectorId);
+        var sectorStart = sec.index * 1000;
+        var famStart = -1;
+        for (var i = 0; i < 25; i++) {
+          if (sec.families[i].id === x.f.id) { famStart = sectorStart + i * 40 + 3; break; }
+        }
+        if (famStart < 0) famStart = sectorStart;
+        return '<a href="#/machine/' + famStart + '">' + x.f.name +
+          ' — ' + App.money(Qorino.livePriceOf(famStart)) + ' · ' + sec.name + '</a>';
+      }).join('');
+
+      var advice = 'For this requirement I would start with the <strong>' + top[0].f.name +
+        '</strong> family in the <em>' + Qorino.sectorById(top[0].f.sectorId).name +
+        '</em> sector. Compare at least three dossiers on OEE, MTBF and energy draw before you shortlist — ' +
+        'the catalogue lists live pricing and lead times for every unit.';
+
+      if (/vibrat|overheat|fault|error|noise|broken|repair|problem/.test(t)) {
+        advice += '<br><br><strong>On the fault:</strong> capture the exact fault code first, then verify power, ' +
+          'coolant flow and drive-unit play. Most reported issues on this class resolve at triage.';
+      }
+      if (/price|budget|cost|cheap|under/.test(t)) {
+        advice += '<br><br><strong>On budget:</strong> use the catalogue sort by price and set the condition ' +
+          'filter to <em>Refurbished</em> to see units at roughly 50–75% of new price.';
+      }
+
+      return advice + '<div class="mini-links">' + links + '</div>';
+    }
+
+    function send(text) {
+      if (!text.trim()) return;
+      push('user', text.replace(/</g, '&lt;'));
+      input.value = '';
+      setTimeout(function () { push('bot', answer(text)); }, 240);
+    }
+
+    document.getElementById('chatSend').addEventListener('click', function () { send(input.value); });
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(input.value); }
+    });
+    document.getElementById('chips').addEventListener('click', function (e) {
+      if (e.target.classList.contains('chip')) send(e.target.textContent);
+    });
+  }
+
+  /* ======================= MANUFACTURERS ======================= */
+  var mfrState = { q: '', page: 1, per: 25 };
+
+  function refreshMfr() {
+    var q = mfrState.q.trim().toLowerCase();
+    var items = Qorino.MANUFACTURERS;
+    if (q) {
+      items = items.filter(function (x) {
+        return x.name.toLowerCase().indexOf(q) > -1 ||
+               x.country.toLowerCase().indexOf(q) > -1 ||
+               x.email.toLowerCase().indexOf(q) > -1;
+      });
+    }
+    var pages = Math.max(1, Math.ceil(items.length / mfrState.per));
+    if (mfrState.page > pages) mfrState.page = pages;
+    var start = (mfrState.page - 1) * mfrState.per;
+    var slice = items.slice(start, start + mfrState.per);
+
+    document.getElementById('mfrList').innerHTML = slice.length
+      ? slice.map(function (x) {
+          return '<div class="mfr-row">' +
+            '<div><div class="mfr-name">' + x.name + '</div>' +
+            '<div class="mfr-meta">est. ' + x.founded + ' · ' + App.num(x.employees) +
+              ' employees · ★ ' + x.rating + '</div></div>' +
+            '<div class="mfr-meta">' + x.country + '</div>' +
+            '<div class="mfr-meta">' + x.email + '<br>' + x.phone + '</div>' +
+            '<a class="mfr-link" href="#/catalog">View machines →</a></div>';
+        }).join('')
+      : '<p class="empty">No manufacturers match that search.</p>';
+
+    var pager = document.getElementById('mfrPager');
+    var html = '<button class="pg" data-p="' + (mfrState.page - 1) + '"' +
+      (mfrState.page === 1 ? ' disabled' : '') + '>‹</button>';
+    var s = Math.max(1, mfrState.page - 3), e = Math.min(pages, s + 6);
+    for (var p = s; p <= e; p++) {
+      html += '<button class="pg' + (p === mfrState.page ? ' active' : '') + '" data-p="' + p + '">' + p + '</button>';
+    }
+    html += '<button class="pg" data-p="' + (mfrState.page + 1) + '"' +
+      (mfrState.page === pages ? ' disabled' : '') + '>›</button>';
+    pager.innerHTML = html;
+
+    var btns = pager.querySelectorAll('.pg');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', function () {
+        var pg = Number(this.getAttribute('data-p'));
+        if (isNaN(pg) || pg < 1 || pg > pages) return;
+        mfrState.page = pg;
+        refreshMfr();
+      });
+    }
+  }
+
+  function viewManufacturers() {
+    app.innerHTML = '' +
+    '<section class="section"><div class="wrap">' +
+      '<div class="section-head"><h2>Top 1,000 Machinery &amp; Robotics Manufacturers</h2>' +
+      '<p>Contract information, country of origin, founding year and specialty.</p></div>' +
+      '<div class="filters" style="grid-template-columns:1fr">' +
+        '<div class="field"><label for="mfrQ">Search manufacturers</label>' +
+        '<input id="mfrQ" type="text" placeholder="Name, country or email…" /></div>' +
+      '</div>' +
+      '<div class="mfr-head"><span>Manufacturer</span><span>Country</span>' +
+        '<span>Contact</span><span></span></div>' +
+      '<div id="mfrList"></div>' +
+      '<div class="pager" id="mfrPager"></div>' +
+    '</div></section>';
+
+    var q = document.getElementById('mfrQ');
+    var tmr;
+    q.addEventListener('input', function () {
+      clearTimeout(tmr);
+      var v = this.value;
+      tmr = setTimeout(function () { mfrState.q = v; mfrState.page = 1; refreshMfr(); }, 170);
+    });
+    refreshMfr();
+  }
+
+  /* ======================= ABOUT ======================= */
+  function viewAbout() {
+    var s = Qorino.stats();
+    return '' +
+    '<section class="section"><div class="wrap" style="max-width:940px">' +
+      '<div class="section-head"><h2>About Qorino Machineries &amp; Robotics</h2>' +
+      '<p>A machinery intelligence company built to make equipment decisions evidence-based.</p></div>' +
+      '<div class="panel"><h3>Our Mission</h3>' +
+        '<p>Machinery is bought on trust, brochures and sales visits. Qorino replaces that with structured, ' +
+        'comparable data: a specification sheet, an exploded diagram, a performance benchmark, a buying ' +
+        'channel and a maintenance plan — for every machine, in one place.</p>' +
+        '<p>This demo build contains <strong>' + App.num(s.machines) + '</strong> distinct machine dossiers across ' +
+        '<strong>' + s.sectors + '</strong> sectors organised into <strong>' + s.domains + '</strong> industrial domains, ' +
+        'with <strong>' + App.num(s.families) + '</strong> machine families and <strong>' +
+        App.num(s.manufacturers) + '</strong> manufacturer records.</p></div>' +
+      '<div class="panel"><h3>How the Catalogue Is Structured</h3>' +
+        '<p>Each sector contains exactly <strong>1,000 distinct machines</strong>:</p>' +
+        '<ul><li>25 different machine families (each a different function — e.g. "Ring Spinning Frame" vs "Rapier Loom")</li>' +
+        '<li>× 40 capacity/automation variants per family (10 capacity tiers × 4 automation levels)</li>' +
+        '<li>= 1,000 uniquely named machines with distinct specifications per sector</li>' +
+        '<li>× 210 sectors = 210,000 machines with no duplicate names</li></ul>' +
+        '<p>Every machine is different by function within its family and different by specification ' +
+        'across the sector — no two machines in the catalogue share the same name.</p></div>' +
+      '<div class="panel"><h3>Live Pricing</h3>' +
+        '<p>Prices shown in the catalogue and on each machine page are pulled from a continuous live market ' +
+        'feed and drift with the market. The page shows a <strong>LIVE</strong> indicator and the current price ' +
+        'updates every 12 seconds.</p>' +
+        '<p style="font-size:.82rem;color:var(--muted)">In this demo the feed is simulated deterministically. ' +
+        'In production, wire the pricing layer to your market data API — the integration point is documented ' +
+        'inside the LivePricing module.</p></div>' +
+      '<div class="panel"><h3>What Each Dossier Contains</h3>' +
+        '<ul><li>Article: what the machine is, how it works, what it is used for</li>' +
+        '<li>Specification table: power, mass, energy, model year, origin</li>' +
+        '<li>Internal &amp; external exploded diagram</li>' +
+        '<li>Worldwide analytics: market share, adoption trend, benchmarks</li>' +
+        '<li>Live buying sources: new, refurbished and secondary market</li>' +
+        '<li>Maintenance &amp; lifecycle management plan</li>' +
+        '<li>Technical support desk with automated diagnosis</li></ul></div>' +
+      '<div class="panel"><h3>Contact</h3>' +
+        '<p>General enquiries: <strong>hello@qorino.example</strong><br>' +
+        'Technical support: <strong>support@qorino.example</strong><br>' +
+        'Procurement desk: <strong>buy@qorino.example</strong></p>' +
+        '<p style="font-size:.82rem;color:var(--muted)">This is a demonstration build. All company names, ' +
+        'contact details, prices and analytics figures are generated and illustrative.</p></div>' +
+    '</div></section>';
+  }
+
+  /* ======================= ROUTER ======================= */
+  function route() {
+    var hash = location.hash.replace(/^#\/?/, '');
+    var parts = hash.split('/').filter(Boolean);
+    var view = parts[0] || 'home';
+
+    App.setActiveNav(view);
+    window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+
+    if (view === 'home') app.innerHTML = viewHome();
+    else if (view === 'domains') app.innerHTML = viewDomains();
+    else if (view === 'domain') app.innerHTML = viewDomain(parts[1]);
+    else if (view === 'catalog') viewCatalog(parts[1]);
+    else if (view === 'sector') viewSector(parts[1]);
+    else if (view === 'machine') viewMachine(parts[1]);
+    else if (view === 'assistant') viewAssistant();
+    else if (view === 'manufacturers') viewManufacturers();
+    else if (view === 'about') app.innerHTML = viewAbout();
+    else app.innerHTML = viewHome();
+  }
+
+  window.addEventListener('hashchange', route);
+  App.mountChrome();
+  App.startLivePriceTicker();
+  route();
+})();
+</script>
+</body>
+</html>
